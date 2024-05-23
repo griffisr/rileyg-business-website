@@ -1,0 +1,52 @@
+.hero-section img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+  }
+header{
+    height: unset;
+}
+/* About Section
+********************************************************************* */
+
+#about {
+	padding: 50px 0 50px 0;
+}
+.about-icon{
+    font-size: 120%;
+    color: #328c33;
+    /*#8abf6f <- Light green */
+}
+#range-rates{
+  padding: 5vh 0 0 0;
+}
+.rolling-img{
+  max-width: 100%;
+}
+.columns h4{
+  text-wrap: pretty;
+}
+
+  /*Desktop*/
+  @media only screen and (min-width: 767px) {
+    .mobile-img{
+        display: none;
+    }
+
+    }
+ /*Mobile*/
+  @media only screen and (max-width: 766px) {
+    .desktop-img{
+        display: none;
+    }
+    .hero-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .video-section{
+        height: 70vh;
+      }
+
+    }
