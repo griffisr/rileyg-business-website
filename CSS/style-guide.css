@@ -1,0 +1,220 @@
+/* Color Palette */
+:root {
+    --primary-color: #4A5568; /* Charcoal */
+    --secondary-color: #718096; /* Cool Grey */
+    --accent-color: #48BB78; /* Green */
+    --background-color: #F7FAFC; /* Light Grey */
+    --text-color: #2D3748; /* Dark Grey */
+  
+    /* Extended Color Palette */
+    --light-accent-color: #9AE6B4; /* Light Green */
+    --dark-accent-color: #2F855A; /* Dark Green */
+    --highlight-color: #E6FFFA; /* Mint Green */
+    --warning-color: #E53E3E; /* Red */
+    --success-color: #38A169; /* Green */
+    --info-color: #4299E1; /* Blue */
+    --neutral-color: #EDF2F7; /* Very Light Grey */
+    --muted-text-color: #A0AEC0; /* Muted Grey */
+  }
+  
+  /* Typography */
+  body {
+    font-family: 'Lato', sans-serif;
+    color: var(--text-color);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+    color: var(--text-color);
+  }
+  
+  h1, h2, h3 {
+    font-weight: bold;
+  }
+  
+  p {
+    font-family: 'Lato', sans-serif;
+    color: var(--primary-color);
+  }
+  
+  a {
+    font-family: 'Lato', sans-serif;
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--dark-accent-color);
+  }
+  
+  button {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: var(--background-color);
+  }
+  
+  /* Logo */
+  .logo {
+    color: var(--accent-color);
+    background-color: var(--background-color);
+  }
+  
+  /* Buttons */
+  .button-primary {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+  }
+  
+  .button-primary:hover {
+    background-color: var(--dark-accent-color);
+    color: var(--background-color);
+  }
+  
+  .button-secondary {
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+  }
+  
+  .button-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+  }
+  
+  .button-tertiary {
+    background-color: var(--neutral-color);
+    color: var(--text-color);
+  }
+  
+  .button-tertiary:hover {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+  }
+  
+  /* Forms and Inputs */
+  input,
+  textarea {
+    background-color: #FFFFFF;
+    border: 1px solid var(--neutral-color);
+    color: var(--text-color);
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: var(--accent-color);
+  }
+  
+  label {
+    color: var(--text-color);
+  }
+  
+  ::placeholder {
+    color: var(--muted-text-color);
+  }
+  
+  /* Alerts */
+  .alert-success {
+    background-color: var(--highlight-color);
+    border-color: var(--accent-color);
+    color: var(--text-color);
+  }
+  
+  .alert-error {
+    background-color: #FED7D7;
+    border-color: var(--warning-color);
+    color: var(--text-color);
+  }
+  
+  .alert-info {
+    background-color: #EBF8FF;
+    border-color: var(--info-color);
+    color: var(--text-color);
+  }
+  
+  .alert-warning {
+    background-color: #FEFCBF;
+    border-color: #ECC94B;
+    color: var(--text-color);
+  }
+  
+  /* Icons and Graphics */
+  .icon-primary {
+    color: var(--accent-color);
+  }
+  
+  .icon-secondary {
+    color: var(--secondary-color);
+  }
+  
+  .icon-container {
+    background-color: var(--neutral-color);
+  }
+  
+  /* Navigation */
+  .navbar {
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }
+  
+  .navbar a {
+    color: var(--background-color);
+  }
+  
+  .navbar a:hover {
+    color: var(--accent-color);
+  }
+  
+  .dropdown {
+    background-color: #FFFFFF;
+    color: var(--text-color);
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }
+  
+  .footer a {
+    color: var(--accent-color);
+  }
+  
+  .footer a:hover {
+    color: var(--dark-accent-color);
+  }
+  
+  /* Call to Action (CTA) */
+  .cta {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+  }
+  
+  .cta:hover {
+    background-color: var(--dark-accent-color);
+    color: var(--background-color);
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+  }
+  
+  td {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  tr:hover td {
+    background-color: var(--neutral-color);
+    color: var(--text-color);
+  }
+  
+  table, th, td {
+    border: 1px solid var(--neutral-color);
+  }
+  
