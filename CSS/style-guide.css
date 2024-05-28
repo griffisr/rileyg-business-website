@@ -155,7 +155,7 @@
     color: var(--background-color);
   }
   
-  .navbar a {
+  .nav-link a {
     color: var(--background-color);
   }
   
@@ -164,8 +164,10 @@
   }
   
   .dropdown {
-    background-color: #FFFFFF;
     color: var(--text-color);
+  }
+  .dropdown-item{
+    color: #2D3748;
   }
   
   /* Footer */

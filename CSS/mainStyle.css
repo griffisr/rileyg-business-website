@@ -40,3 +40,8 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.navbar-brand-logo{
+
+    max-height: 10vh;
+}
