@@ -8,23 +8,56 @@
 
 .our-clients img {
     max-width: 70%;
-    opacity: 0.4;
+    opacity: 1;
     filter: alpha(opacity=40);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
 
-.our-clients img:hover {
-    opacity: 1;
+
+#elams-roofing-website{
+
+}
+#snapbooth-website{
+    background-image: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/portfolio/snapbooth-website.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+#peppers-website{
+    background-image: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/portfolio/peppers-website.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
 }
 
+.portfolio-grid-cell{
+    border: .5px solid rgb(0, 0, 0);
+}
+.portfolio-grid-cell:hover{
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: linear;
+    animation-iteration-count: linear;
+    transform: scale(1.2);
+    opacity: 1;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    z-index: 9;
 
-
-
+}
+.portfolio-grid-cell:hover > .brand-logo-img{
+    opacity: 0;
+}
 
 
 
@@ -186,7 +219,6 @@ footer .box {
     align-items: center;
     padding-bottom: 5em;
     margin-bottom: 5em;
-    border-bottom: 2px solid #e5f7fb
 }
 #features .features-content+.features-content {
     border: 0
@@ -681,3 +713,6 @@ footer .box {
     right: 33px;
     top: 25px;
 }
+
+
+
