@@ -22,3 +22,19 @@ $(".btn-with-icon").on("click", function() {
         $(".wave-anim").removeClass('visible');
     });
 });
+
+
+
+/*----------------------------------------------------*/
+/* Navigation
+------------------------------------------------------ */
+
+$(window).scroll(function() {
+
+    //Adds the nav bar when user starts to scroll
+    if ($(window).scrollTop() > -1) {
+        $('.main_nav').addClass('sticky');
+    } else {
+        $('.main_nav').removeClass('sticky');
+    }
+});
