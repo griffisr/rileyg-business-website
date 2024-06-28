@@ -99,6 +99,9 @@
 }
 
 @media  (max-width: 575px)  {
+   .jumbotron h1{
+    font-size: 3.1rem!important;
+   }
     #top-hero-img{
         content: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/hero-img/Hero-Mobile.png");
     }
@@ -147,3 +150,12 @@
 
 
 */
+
+
+.test-img{
+    height: 20vh;
+    max-height: 150px
+}
+.cta-img-col {
+    height: 100%;
+}
