@@ -32,9 +32,11 @@ $(".btn-with-icon").on("click", function() {
 $(window).scroll(function() {
 
     //Adds the nav bar when user starts to scroll
-    if ($(window).scrollTop() > -1) {
-        $('.main_nav').addClass('sticky');
+    if ($(window).scrollTop() > 150) {
+        $('.navbar').addClass('sticky-top');
+        console.log("stickey on")
     } else {
-        $('.main_nav').removeClass('sticky');
+        $('.navbar').removeClass('sticky-top');
+        console.log("stickey off")
     }
 });
