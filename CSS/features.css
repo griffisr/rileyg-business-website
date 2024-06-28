@@ -75,13 +75,12 @@ section .box{
         width: 100% !important;
         min-width: 0px !important;
         padding: 1em !important;
-        margin-bottom: 10em;
 
     }
 
     #features .features-content{
         height: 80vh;
-        margin-bottom: -20em;
+        margin-bottom: -10em;
     }
 
     #features .features-content-col{
@@ -90,10 +89,17 @@ section .box{
     #features .features-graph{
         height: 100%!important;
         margin: 0!important;
+        padding-top: 2em;
     }
 
     #features .features-graph .sq-bt-label{
         font-size: unset!important;
+    }
+    #features .features-graph .flash-oval {
+        margin: 15em auto 9em auto!important;
+    }
+    #features .features-graph .icon-features-1, #features .features-graph .icon-features-4{
+        background-position: center!important;
     }
 }
 

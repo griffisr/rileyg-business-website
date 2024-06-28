@@ -68,7 +68,7 @@
     background-color: #718096;
 }
 .navbar{
-    padding-top: 3em;
+    padding-top: .5em;
     margin: 0;
     min-width: 100%;
     z-index: 999;
@@ -93,66 +93,57 @@
 
 }
 #top-hero-img{
+    overflow: hidden;
     max-width: 100vw;
-    content: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/hero-img/Hero1200.png");
+
+}
+
+@media  (max-width: 575px)  {
+    #top-hero-img{
+        content: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/hero-img/Hero-Mobile.png");
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 768px)  {
+    #top-hero-img{
+        content: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/hero-img/Hero-Tablet.png");
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991px)  {
+    #top-hero-img{
+        content: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/hero-img/Hero-Tablet.png");
+    }
+
 }
 
 /*
-@media (max-width: 576px) {
-    .hero-img-wrapper{
-        background-image: url("/Images/hero-img/Hero576.png");
-        min-height: 790px;
+@media (min-width: 992px) and (max-width: 1199px)  {
+    #top-hero-img{
+        content: url("/Images/hero-img/Hero992.png");
     }
-    .hero-container{
-        min-height: 790px;
 
-    }
-}
-@media (max-width: 768px) {
-    .hero-img-wrapper{
-        background-image: url("/Images/hero-img/Hero768.png");
-        min-height: 1050px;
-    }
-    .hero-container{
-        min-height: 1050px;
-
-    }
-}
-@media (max-width: 992px) {
-    .hero-img-wrapper{
-        background-image: url("/Images/hero-img/Hero992.png");
-        min-height: 1358px;
-    }
-    .hero-container{
-        min-height: 1358px;
-
-    }
 }
 
-@media (max-width: 1200px) {
-    .hero-img-wrapper{
-        background-image: url("/Images/hero-img/Hero1200.png");
-        min-height: 1642px;
+@media (min-width: 1200px) and (max-width: 1599px)  {
+    #top-hero-img{
+        content: url("/Images/hero-img/Hero1200.png");
     }
-    .hero-container{
-        min-height: 1642px;
 
-    }
 }
 
-@media (min-width: 1201px) {
-    .hero-img-wrapper{
-        background-image: url("/Images/hero-img/Hero1800.png");
-        min-height: 1642px;
+@media (min-width: 1600px) {
+    #top-hero-img{
+        content: url("/Images/hero-img/Hero1800.png");
     }
-    .hero-container{
-        min-height: 1642px;
 
-    }
 }
+
 
 
 
 
 */
-
