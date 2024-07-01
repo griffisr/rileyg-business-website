@@ -74,7 +74,7 @@
 
 @media (max-width: 768px) {
     .section{
-        padding: 3rem 15px
+        padding: 3rem 15px 1.5rem 15px;
     }
 }
 

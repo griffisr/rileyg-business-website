@@ -52,7 +52,9 @@ section .box{
         margin-bottom: 5em;
     }
 
-
+    #features .features-graph .sq-bt-label{
+        line-height: 16px;
+    }
 
 }
 
@@ -80,7 +82,8 @@ section .box{
 
     #features .features-content{
         height: 80vh;
-        margin-bottom: -10em;
+        margin-bottom: -8em;
+       
     }
 
     #features .features-content-col{
@@ -89,17 +92,22 @@ section .box{
     #features .features-graph{
         height: 100%!important;
         margin: 0!important;
-        padding-top: 2em;
+        padding-top: 3vh;
     }
 
     #features .features-graph .sq-bt-label{
         font-size: unset!important;
+        line-height: 10px;
+    
     }
     #features .features-graph .flash-oval {
-        margin: 15em auto 9em auto!important;
+        margin: 15em auto 12em auto!important;
     }
     #features .features-graph .icon-features-1, #features .features-graph .icon-features-4{
         background-position: center!important;
+    }
+    #features-graphic{
+        margin-bottom: 20%;
     }
 }
 
@@ -320,7 +328,6 @@ section .box{
     color: #656b6f;
     font-size: 11px;
     font-weight: 400;
-    line-height: 16px;
     position: absolute;
     text-transform: uppercase
 }
@@ -329,7 +336,7 @@ section .box{
     top: 33%;
 }
 #features .features-graph .label-top {
-    right: 21.3%;
+    right: 20%;
     top: 33%
 }
 #features .features-graph .label-top-right {
