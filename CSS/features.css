@@ -48,13 +48,41 @@ section .box{
 
 /*Desktop*/
 @media all and (min-width: 860px) {
-    #features .features-content-col{
+    /*    #features .features-content-col{
         margin-bottom: 5em;
     }
 
     #features .features-graph .sq-bt-label{
         line-height: 16px;
+    }  */
+
+    #features .features-content-col{
+        width: 50%;
     }
+
+    #features .features-graph .animation-holder {
+        margin: -4vh 0 -2.5vh 0;
+    
+    }
+    #features .features-graph .features-line-top-center{
+        background-position: top center;
+    }
+    #features .features-graph .features-line-bottom-center{
+        background-position: bottom center;
+    }
+    #features .features-graph .features-line{
+        transform: scaleX(1.2);
+        }
+    #features-text-content p, #features-text-content u,#features-text-content li, #features-text-content h2{
+        font-size: 200%!important;
+        
+    }
+
+    #features .features-graph .btn-with-icon{
+        width: 33%;
+        height: 3rem;
+    }
+
 
 }
 
@@ -63,16 +91,35 @@ section .box{
 /*tablets*/
 @media all and (min-width: 641px) and (max-width: 860px) {
 
-    section .box {
+        section .box {
         width: 100% !important;
         min-width: 600px !important;
         padding: 1em !important;
+    } 
+
+    #features .features-graph .animation-holder {
+        margin: -4vh 0 -3vh 0;
+    }
+    #features .features-graph .features-line-bottom-center{
+        background-position: bottom center;
+    }
+    #features .features-graph .features-line-top-center{
+        background-position: top center;
+    }
+    #features .features-content-col{
+        height: auto;
+    }
+
+    #features .features-graph .btn-with-icon{
+        width: 33%;
+        height: 3rem;
     }
 
 }
 
 /*Mobile*/
 @media all and (max-width: 640px) {
+
     section .box {
         width: 100% !important;
         min-width: 0px !important;
@@ -80,34 +127,51 @@ section .box{
 
     }
 
-    #features .features-content{
-        height: 80vh;
-        margin-bottom: -8em;
-       
-    }
 
     #features .features-content-col{
         height: inherit;
     }
     #features .features-graph{
-        height: 100%!important;
         margin: 0!important;
-        padding-top: 3vh;
     }
 
     #features .features-graph .sq-bt-label{
         font-size: unset!important;
-        line-height: 10px;
     
     }
-    #features .features-graph .flash-oval {
-        margin: 15em auto 12em auto!important;
+
+    #features .features-graph .animation-holder {
+           margin: -6vh 0 -2vh 0;
+       }
+
+    #features .features-graph .features-line-bottom-center{
+        background-position: top center;
     }
-    #features .features-graph .icon-features-1, #features .features-graph .icon-features-4{
-        background-position: center!important;
+    #features .features-graph .features-line-top-center{
+        background-position: top center;
+    }
+    #features .features-content-col{
+        height: auto;
     }
     #features-graphic{
-        margin-bottom: 20%;
+        width: 60%;
+    }
+    .desktop-spacer{
+        display: none;
+        
+    }
+    #features .features-graph .features-line{
+    transform: scaleX(.5);
+    }
+    .button-holder{
+        margin-top: -2vh;
+    }
+    
+
+
+    #features .features-graph .btn-with-icon{
+        width: 70%;
+        height: 3rem;
     }
 }
 
@@ -155,9 +219,7 @@ section .box{
 
 /***************Defines styles for the title, content, and text blocks within the features section.***********************************************/
 
-#features {
-    text-align: center
-}
+
 #features .features-title {
     display: inline-block;
     position: relative;
@@ -168,7 +230,9 @@ section .box{
     line-height: 46px;
     text-transform: uppercase;
     letter-spacing: 3px;
-    margin: 1em 0
+    margin: 1em 0;
+    width: 100%;
+    text-align: center;
 }
 #features .features-title::after {
     display: block;
@@ -191,8 +255,7 @@ section .box{
 #features .features-content+.features-content {
     border: 0
 }
-#features .features-content-col {
-    width: 50%;
+#features-text-content {
     text-align: left
 }
 #features .features-textblock {
@@ -260,10 +323,13 @@ section .box{
 
 /**************************************************************/
 
+/*Main container holding the matrix w/ button-holder on top and bottom*/
 #features .features-graph {
-    height: 425px;
+    /* height: 425px; */
     margin: 25px
 }
+
+/* Display settings for button holders (Burger buns)*/
 #features .features-graph .button-holder {
     display: flex;
     display: -webkit-box;
@@ -273,31 +339,61 @@ section .box{
     -webkit-justify-content: center;
     align-items: center
 }
+
+
+
+#features .features-graph .label-holder {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-justify-content: center;
+}
+.label-container{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Display settings for middle Bubble/animation holder (Burger) */
 #features .features-graph .animation-holder {
+ /*  */
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+
 }
+
+/* Size and appearance settings for middle oval */
 #features .features-graph .flash-oval {
     background-color: #00bff3;
-    width: 12em;
+    width: 55%;
     height: 12em;
     border-radius: 7em;
     -webkit-transform: translateX(1px);
     -ms-transform: translateX(1px);
     transform: translateX(1px);
     z-index: 100;
-    margin: 10em auto 9em auto
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
+/* Display settings for icon inside the oval to keep it in the middle */
 #features .features-graph .flash-oval img {
-    position: absolute;
-    right: 32px;
-    top: 23px;
+    height: 70%;
 }
+/**********Button Settings  ************/
+/* Size and appearance settings for section buttons */
 #features .features-graph .btn-with-icon {
     display: block;
-    width: 70px;
-    height: 70px;
+
+    
     background-color: #fff;
     border: 1px solid #9df;
     -webkit-border-radius: 10px;
@@ -307,15 +403,18 @@ section .box{
     transition-duration: 0.3s;
     background-position: center;
     background-repeat: no-repeat;
-    line-height: 5em;
+    line-height: 2em;
     z-index: 0;
     cursor: pointer;
-    margin-left: 8%;
-    margin-right: 8%;
+    /* How much is blank space on each side of the button within the container */
+    margin-left: 0%;
+    margin-right: 0%;
     text-align: center;
     opacity: 0.5;
     filter: alpha(opacity=50)
 }
+
+/* Active tab/button */
 #features .features-graph .btn-with-icon.__active {
     opacity: 1;
     filter: alpha(opacity=100)
@@ -323,14 +422,20 @@ section .box{
 #features .features-graph .btn-with-icon:hover {
     opacity: 1
 }
+
+
+/**********Button Label Settings  ************/
 #features .features-graph .sq-bt-label {
     letter-spacing: 0;
     color: #656b6f;
     font-size: 11px;
     font-weight: 400;
     position: absolute;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
+
+/* Adjust placement of labels so they're below the box */
+/* 
 #features .features-graph .label-top-left {
     right: 36%;
     top: 33%;
@@ -354,73 +459,137 @@ section .box{
 #features .features-graph .label-bottom-right {
     right: 6.6%;
     bottom: 13%;
+}  /**/
+
+
+
+#features .features-graph .line-holder{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
+
+
+#features .features-graph .icon-label-holder{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+/* Connection lines */
+#features .features-graph .features-line{
+    
+}
+
+/* Top Left */
 #features .features-graph .icon-features-1:after {
+  
+/*     position: absolute;
+    top: 36.4% */
+}
+#features .features-graph .features-line-top-left{
     content: ' ';
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/598117/top-left.svg);
-    background-size: 100%;
     height: 110px;
     width: 85px;
+    background-image: url(https://s3.amazonaws.com/rileyg.me/business-website/Images/Lines/top-left.svg);
     background-repeat: no-repeat;
-    position: absolute;
-    top: 36.4%
+    background-size: 100%;
+
 }
+
+/* Top Center */
 #features .features-graph .icon-features-2:after {
+/*     position: absolute;
+    top: 36.4% */
+
+}
+
+#features .features-graph .features-line-top-center{
     content: ' ';
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/598117/top.svg);
+    background-image: url(https://s3.amazonaws.com/rileyg.me/business-website/Images/Lines/top.svg);
     height: 110px;
     width: 85px;
     background-repeat: no-repeat;
-    position: absolute;
-    top: 36.4%
 }
+
+/* Top Right */
 #features .features-graph .icon-features-3:after {
+/*     top: 36.4%;
+    right: 10% */
+
+}
+#features .features-graph .features-line-top-right{
     content: ' ';
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/598117/top-right.svg);
+    background-image: url(https://s3.amazonaws.com/rileyg.me/business-website/Images/Lines/top-right.svg);
     background-size: 100%;
     height: 110px;
     width: 85px;
     background-repeat: no-repeat;
-    position: absolute;
-    top: 36.4%;
-    right: 10%
+
 }
+/**************************************************************************/
+/*Bottom Left*/
 #features .features-graph .icon-features-4:after {
+/*    position: absolute;
+    bottom: 26%  */
+
+}
+
+#features .features-graph .features-line-bottom-left{
     content: ' ';
     background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/598117/bottom-left.svg);
     background-size: 100%;
     height: 110px;
     width: 85px;
     background-repeat: no-repeat;
-    position: absolute;
-    bottom: 26%
+
 }
+
+/*Bottom Center*/
 #features .features-graph .icon-features-5:after {
+   /*    position: absolute;
+    bottom: 23%  */
+}
+
+#features .features-graph .features-line-bottom-center{
     content: ' ';
     background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/598117/bottom.svg);
     height: 110px;
     width: 85px;
     background-repeat: no-repeat;
-    position: absolute;
-    bottom: 23%
 }
+
+/* Bottom Right */
 #features .features-graph .icon-features-6:after {
+/*     position: absolute;
+    bottom: 26%;
+    right: 10% */
+
+}
+
+#features .features-graph .features-line-bottom-right{
     content: ' ';
     background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/598117/bottom-right.svg);
     background-size: 100%;
     height: 110px;
     width: 85px;
     background-repeat: no-repeat;
-    position: absolute;
-    bottom: 26%;
-    right: 10%
+
 }
-#features .features-graph #top-left-line {
+
+
+
+/* #features .features-graph #top-left-line {
     position: absolute;
     top: 170px;
     left: 50px;
     z-index: -4
-}
+} */
+
+
+
+
+/* Button Icon Images */
 #features .features-graph .icon-features-1 {
     background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/598117/icon-1.svg);
     background-size: 150%;
@@ -449,10 +618,13 @@ section .box{
     background-size: 65%;
     background-position: 50% 50%
 }
+
+
+/**********Animation appearance Settings***********/
 #features .features-graph .wave {
     position: absolute;
     opacity: 0;
-    width: 12em;
+    width: 30em;
     height: 12em;
     border: #56a9e8 1px solid;
     border-radius: 7em;
@@ -468,7 +640,7 @@ section .box{
 #features .features-graph .wave2 {
     position: absolute;
     opacity: 0;
-    width: 12em;
+    width: 30em;
     height: 12em;
     border: #56a9e8 1px solid;
     border-radius: 7em;
@@ -484,7 +656,7 @@ section .box{
 #features .features-graph .wave3 {
     position: absolute;
     opacity: 0;
-    width: 12em;
+    width: 30em;
     height: 12em;
     border: #56a9e8 1px solid;
     border-radius: 7em;
@@ -500,7 +672,7 @@ section .box{
 #features .features-graph .wave4 {
     position: absolute;
     opacity: 0;
-    width: 12em;
+    width: 30em;
     height: 12em;
     border: #56a9e8 1px solid;
     border-radius: 7em;
@@ -558,8 +730,8 @@ section .box{
         opacity: 0.7
     }
     to {
-        -webkit-transform: scale(2);
-        transform: scale(2);
+        -webkit-transform: scale(1.7);
+        transform: scale(1.7);
         opacity: 0
     }
 }
@@ -568,8 +740,8 @@ section .box{
         opacity: 0.7
     }
     to {
-        -webkit-transform: scale(2);
-        transform: scale(2);
+        -webkit-transform: scale(1.7);
+        transform: scale(1.7);
         opacity: 0
     }
 }
@@ -578,8 +750,8 @@ section .box{
         opacity: 0.6
     }
     to {
-        -webkit-transform: scale(2.5);
-        transform: scale(2.5);
+        -webkit-transform: scale(2);
+        transform: scale(2);
         opacity: 0
     }
 }
@@ -588,11 +760,14 @@ section .box{
         opacity: 0.4
     }
     to {
-        -webkit-transform: scale(2.5);
-        transform: scale(2.5);
+        -webkit-transform: scale(2);
+        transform: scale(2);
         opacity: 0
     }
 }
+
+
+/**********Tab/Section text appearance Settings***********/
 #features .features-items {
     display: flex;
     display: -webkit-box;
@@ -654,40 +829,5 @@ section .box{
     -ms-border-radius: 50%;
     border-radius: 50%
 }
-#features .features-graph {
-    height: 425px;
-    margin: 25px
-}
-#features .features-graph .button-holder {
-    display: flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    justify-content: center;
-    -webkit-justify-content: center;
-    align-items: center
-}
-#features .features-graph .animation-holder {
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-#features .features-graph .flash-oval {
-    background-color: #00bff3;
-    width: 12em;
-    height: 12em;
-    border-radius: 7em;
-    -webkit-transform: translateX(1px);
-    -ms-transform: translateX(1px);
-    transform: translateX(1px);
-    z-index: 100;
-    margin: 10em auto 9em auto
-}
-#features .features-graph .flash-oval img {
-    position: absolute;
-    right: 33px;
-    top: 25px;
-}
-
 
 
