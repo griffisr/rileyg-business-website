@@ -57,7 +57,8 @@ section .box{
     }  */
 
     #features .features-content-col{
-        width: 50%;
+        /* This is what was b=making the blue circle bigger and making animation not match */
+        /* width: 50%; */
     }
 
     #features .features-graph .animation-holder {
@@ -153,9 +154,7 @@ section .box{
     #features .features-content-col{
         height: auto;
     }
-    #features-graphic{
-        width: 60%;
-    }
+
     .desktop-spacer{
         display: none;
         
