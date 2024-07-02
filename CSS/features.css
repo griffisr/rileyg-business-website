@@ -44,10 +44,49 @@ section .box{
     margin: 0 auto
 }
 
+/* Big desktop */
+@media all and (min-width: 1440px){
 
+    #features .features-content-col{
+        width: 50%; 
+   }
+   #features-text-content p, #features-text-content u,#features-text-content li, #features-text-content h2 {
+    font-size: 250%!important;
+   }
+   #features .features-graph .animation-holder {
+    margin: -4vh 0 -2.5vh 0;
+
+}
+#features .features-graph .features-line-top-center{
+    background-position: top center;
+}
+#features .features-graph .features-line-bottom-center{
+    background-position: bottom center;
+}
+#features .features-graph .features-line{
+    transform: scaleX(1.6);
+    }
+
+    #features .features-graph .btn-with-icon{
+        width: 50%;
+        height: 5rem;
+    }
+}
+
+/* Big desktop */
+@media all and (min-width: 1200px){
+
+    #features .features-content-col{
+        width: 50%; 
+   }
+   #features .features-graph .sq-bt-label {
+    font-size: 200%!important;
+   }
+
+}
 
 /*Desktop*/
-@media all and (min-width: 860px) {
+@media all and (min-width: 860px) and (max-width: 1439px){
     /*    #features .features-content-col{
         margin-bottom: 5em;
     }
@@ -56,10 +95,6 @@ section .box{
         line-height: 16px;
     }  */
 
-    #features .features-content-col{
-        /* This is what was b=making the blue circle bigger and making animation not match */
-        /* width: 50%; */
-    }
 
     #features .features-graph .animation-holder {
         margin: -4vh 0 -2.5vh 0;
@@ -72,7 +107,7 @@ section .box{
         background-position: bottom center;
     }
     #features .features-graph .features-line{
-        transform: scaleX(1.2);
+        transform: scaleX(.8);
         }
     #features-text-content p, #features-text-content u,#features-text-content li, #features-text-content h2{
         font-size: 200%!important;
@@ -110,6 +145,9 @@ section .box{
     #features .features-content-col{
         height: auto;
     }
+    #features .features-graph .features-line{
+        transform: scaleX(.8);
+        }
 
     #features .features-graph .btn-with-icon{
         width: 33%;
@@ -128,6 +166,9 @@ section .box{
 
     }
 
+    #features .features-content{
+        flex-direction: column;
+    }
 
     #features .features-content-col{
         height: inherit;
@@ -171,6 +212,10 @@ section .box{
     #features .features-graph .btn-with-icon{
         width: 70%;
         height: 3rem;
+    }
+    #features-text-content p{
+        margin: 0;
+
     }
 }
 
@@ -606,7 +651,6 @@ section .box{
 #features .features-graph .icon-features-4 {
     background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/598117/icon-4.svg);
     background-size: 150%;
-    background-position: 50% 0
 }
 #features .features-graph .icon-features-5 {
     background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/598117/icon-5.svg);
@@ -623,7 +667,7 @@ section .box{
 #features .features-graph .wave {
     position: absolute;
     opacity: 0;
-    width: 30em;
+    width: 100%;
     height: 12em;
     border: #56a9e8 1px solid;
     border-radius: 7em;
@@ -639,7 +683,7 @@ section .box{
 #features .features-graph .wave2 {
     position: absolute;
     opacity: 0;
-    width: 30em;
+    width: 100%;
     height: 12em;
     border: #56a9e8 1px solid;
     border-radius: 7em;
@@ -655,7 +699,7 @@ section .box{
 #features .features-graph .wave3 {
     position: absolute;
     opacity: 0;
-    width: 30em;
+    width: 100%;
     height: 12em;
     border: #56a9e8 1px solid;
     border-radius: 7em;
@@ -671,7 +715,7 @@ section .box{
 #features .features-graph .wave4 {
     position: absolute;
     opacity: 0;
-    width: 30em;
+    width: 100%;
     height: 12em;
     border: #56a9e8 1px solid;
     border-radius: 7em;
