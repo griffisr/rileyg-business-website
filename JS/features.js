@@ -1,42 +1,50 @@
-(function() {
-    var selectors = {
-        nav: '[data-features-nav]',
-        tabs: '[data-features-tabs]',
-        active: '.__active'
-    }
-    var classes = {
-        active: '__active'
-    }
-    $('a', selectors.nav).on('click', function() {
-        let $this = $(this)[0];
-        $(selectors.active, selectors.nav).removeClass(classes.active);
-        $($this).addClass(classes.active);
-        $('div', selectors.tabs).removeClass(classes.active);
-        $($this.hash, selectors.tabs).addClass(classes.active);
-        return false
-    });
-}());
-
-$(".btn-with-icon").on("click", function() {
-    $(".wave-anim").addClass('visible').one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd", function() {
-        $(".wave-anim").removeClass('visible');
-    });
-});
-
-
-
 /*----------------------------------------------------*/
 /* Navigation
 ------------------------------------------------------ */
 
-$(window).scroll(function() {
+(function($) { "use strict";
 
-    //Adds the nav bar when user starts to scroll
-    if ($(window).scrollTop() > 150) {
-        $('.navbar').addClass('sticky-top');
-        console.log("stickey on")
-    } else {
-        $('.navbar').removeClass('sticky-top');
-        console.log("stickey off")
-    }
-});
+	$(function() {
+		var header = $(".start-style");
+		$(window).scroll(function() {    
+			var scroll = $(window).scrollTop();
+		
+			if (scroll >= 10) {
+				header.removeClass('start-style').addClass("scroll-on");
+			} else {
+				header.removeClass("scroll-on").addClass('start-style');
+			}
+		});
+	});		
+		
+	//Animation
+	
+	$(document).ready(function() {
+		$('body.hero-anime').removeClass('hero-anime');
+	});
+
+	//Menu On Hover
+		
+	$('body').on('mouseenter mouseleave','.nav-item',function(e){
+			if ($(window).width() > 750) {
+				var _d=$(e.target).closest('.nav-item');_d.addClass('show');
+				setTimeout(function(){
+				_d[_d.is(':hover')?'addClass':'removeClass']('show');
+				},1);
+			}
+	});	
+	
+	//Switch light/dark
+	
+	$("#switch").on('click', function () {
+		if ($("body").hasClass("dark")) {
+			$("body").removeClass("dark");
+			$("#switch").removeClass("switched");
+		}
+		else {
+			$("body").addClass("dark");
+			$("#switch").addClass("switched");
+		}
+	});  
+	
+  })(jQuery); 

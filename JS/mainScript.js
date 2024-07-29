@@ -38,36 +38,4 @@ function fade($ele) {
 fade($('.quoteLoop > .quote').first());
 
 
-/*----------------------------------------------------*/
-/* Navigation
------------------------------------------------------- */
-
-// $(window).scroll(function() {
-
-//     //Adds the nav bar when user starts to scroll
-//     if ($(window).scrollTop() > ($('.navbar').height() * 3) ) {
-//         $('.navbar').addClass('sticky-top');
-//         console.log("stickey on")
-//     } else {
-//         $('.navbar').removeClass('sticky-top');
-//         console.log("stickey off")
-//     }
-// });
-
-// Mobile Navigation
-$('.mobile-toggle').click(function() {
-    if ($('.main_nav').hasClass('open-nav')) {
-        $('.main_nav').removeClass('open-nav');
-    } else {
-        $('.main_nav').addClass('open-nav');
-    }
-});
-
-$('.main_nav li a').click(function() {
-    if ($('.main_nav').hasClass('open-nav')) {
-        $('.navigation').removeClass('open-nav');
-        $('.main_nav').removeClass('open-nav');
-    }
-});
-
 

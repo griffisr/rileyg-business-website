@@ -38,8 +38,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <!--My Styles-->
-<link rel="stylesheet" href="CSS/Page/landingExtra.css">
-<link rel="stylesheet" href="CSS/mainStyle.css">
+<!-- <link rel="stylesheet" href="CSS/mainStyle.css"> -->
+<link rel="stylesheet" href="CSS/nav.css">
+<link rel="stylesheet" href="CSS/Page/services.css">
 
 
 
@@ -60,290 +61,91 @@
 <!-- Header Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<nav class="navbar navbar-dark navbar-expand-md nav-fill sticky-top">
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">
-     <img class="navbar-brand-logo" src="https://s3.amazonaws.com/rileyg.me/business-website/Images/Logo/Logo.png" href="#"></img>
-  </a>
- 
-  <!--Section that gets put into the mobile drop down-- -->
-  <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-      
-      <ul class="navbar-nav">
-
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Services
-          </a>
-          <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">All Services</a>
-            <a class="dropdown-item" href="#">Website Design</a>
-            <a class="dropdown-item" href="#">Website Hosting</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">SEO Audit</a>
-            <a class="dropdown-item" href="#">Website Refresh</a>
-            
-          </div>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Portfolio</a>
-        </li>
-
-
-
-
-
-      </ul>
-
-
-    </div>
-
-
-
-
-
-</nav>
-
-    
-
-   <div class="parallax">
-  
-    <div class="first">
-      <div class="container">
-        <div class="container-fluid hero-container col">
-          <div class="hero-img-wrapper">
-            <!-- <img id="top-hero-img" class="img-responsive center-block" src="" alt="text"> -->
-          </div>
-          <div class="container">
-              <div class="col-xl">
-                  <div class="jumbotron">
-                      <h1>Empower Your Local Business with LocalPro</h1>
-                      <p class="lead">Professional web design and development tailored to your needs.</p>
-                      <hr class="my-4">
-                      <p>Specializing in website design, e-commerce solutions, SEO optimization, and more!</p>
-                      <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                      </p>
+<div class="navigation-wrap bg-light start-header start-style">
+    <div class="container nav-wrapper">
+        <!-- <a class="navbar-brand desktop-img" href="#" target="_blank"><img src="https://s3.amazonaws.com/rileyg.me/business-website/Images/Logo/Logo.png" alt=""></a>	 -->
+                    
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand mobile-img" href="#" target="_blank"><img src="https://s3.amazonaws.com/rileyg.me/business-website/Images/Logo/Logo.png" alt=""></a>	
+                  
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto py-4 py-md-0">
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                </div>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="#">Portfolio</a>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="#">Agency</a>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                </div>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="#">Journal</a>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
                     </div>
-          
-      
-              </div>
-      
-          </div>
-      
-      </div>
-        
-      </div>
-
-
-
-
-
-
-
-      <a class="smoothscroll" href="#feature-items">
-      <div class="scroll-down"></div>
-      </a>
-    </div>
-  
-    <div class="bg_foreground">
-      
-      <div class="landing-text">
-        <p class="section__intro">At LocalPro Web Solutions, we specialize in creating custom-designed, user-friendly websites for your local business. With proven techniques and a deep understanding of local SEO, we drive traffic to your website and convert visitors into loyal customers.</p>
-      </div>
-     
-
-    </div>
-  
-    <div class="bg_background" id="feature-items">
-      <section class="section landing-card-section">
-        <div class="wrapper">
-          <div class="box__grid">
-
-
-
-
-
-
-            <article class="box">
-              <a class="box__content" href="about-us.html">
-                <h3 class="box__title">ABOUT US</h3>
-               
-                <p>Get to know the story behind LocalPro. </p>
-                <span class="box__more">READ MORE <i class="material-icons">double_arrow</i></span>
-              </a>
-            </article>
-
-            <article class="box">
-              <a class="box__content" href="driving-range.html">
-                <h3 class="box__title">SERVICES</h3>
-                <p>Take a look at all of the wonderful services we offer</p>
-                <span class="box__more">GET STARTED <i class="material-icons">double_arrow</i></span>
-              </a>
-            </article>
-
-            <article class="box">
-              <a class="box__content" href="events.html">
-                <h3 class="box__title">PORTFOLIO</h3>
-                <p>See first hand from some of our clients why LocalPro is your goto website design!</p>
-                <span class="box__more">CHECK IT OUT <i class="material-icons">double_arrow</i></span>
-              </a>
-            </article>
-
-          </div>
-        </div>
-      </section>
-    </div>
-    
-  </div>
-  <!-- Portfolio Section
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->  
-
-<!-- <section id="portfolio">
-  <div class="container">
-    <h1>Work</h1>
-    <div class="block"></div>
-    <div class="row">
-      <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work One"/></div>
-      <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work Two"/></div>
-      <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work Three"/></div>
-      <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work Four"/></div>
-    </div>
-    <div class="row" style="margin-top: 30px;">
-      <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work Five"/></div>
-      <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work Six"/></div>
-      <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work Seven"/></div>
-      <div class="three columns"> <img src="http://placehold.it/220x220" class="image" alt="Work Eight"/></div>
-    </div>
-  </div>
-</section> -->
-
-
-  <!-- Testimonials Section
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->  
-
-<!-- <section id="testimonial">
-  <div class="container">
-    <div class="quoteLoop">
-      <blockquote class="quote"> <img src="http://placehold.it/100x100" width="100" height="100" alt=""/>
-        <h5>&nbsp;<br>
-          &rdquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&rdquo;<br>
-          <small>Steve Bruce, Sed ut perspiciatis unde omnis</small></h5>
-      </blockquote>
-      <blockquote class="quote"> <img src="http://placehold.it/100x100" width="100" height="100" alt=""/>
-        <h5>&nbsp;<br>
-          &ldquo;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.&rdquo;<br>
-          <small>Tom Jones, Sed ut perspiciatis unde omnis</small></h5>
-      </blockquote>
-    </div>
-  </div>
-</section> -->
-
-<!-- Contact Section
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->  
-
-<div class="container-fluid" id="contact-section">
-
-  <div class="row justify-content-center">
-
-    <div class="col-lg-8 col-lg-offset-2">
-
-      <h2 id="contact-header">Ready to Elevate Your Online Presence?</h2>
-      <h4 id="contact-header"><a href="">Start Your Free Consultation Today!</a></h4>
-      <p id="contact-header">Our expert team is here to understand your needs and provide tailored solutions that will elevate your business. Fill out the form below, and we'll get in touch with you shortly to discuss your project and how we can help you achieve your goals.</p>
-
-      <form id="contact-form"  action="" role="form">
-
-      <div class="messages"></div>
-
-      <div class="controls">
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="form_name">First name *</label>
-              <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your first name" required="required" data-error="Firstname is required.">
-              <div class="help-block with-errors"></div>
+                    
+                </nav>		
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="form_lastname">Last name *</label>
-              <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your last name" required="required" data-error="Lastname is required.">
-              <div class="help-block with-errors"></div>
-            </div>
-          </div>
         </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="form_email">Email *</label>
-              <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
-              <div class="help-block with-errors"></div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="form_phone">Phone</label>
-              <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone number">
-              <div class="help-block with-errors"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-12">
-            <div class="form-group">
-              <label for="form_business_name">Business Name *</label>
-              <input id="form_business_name" type="business_name" name="business_name" class="form-control" placeholder="Please enter your business name *" required="required" data-error="Business name is required.">
-              <div class="help-block with-errors"></div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-
-        <div class="row">
-          <div class="col-md-12">
-            <div class="form-group">
-              <label for="form_message">Project Details *</label>
-              <textarea id="form_message" name="message" class="form-control" placeholder="Please, tell us a bit about your specific needs.." rows="4" required="required" data-error="Please, tell us a bit about your specific needs.."></textarea>
-              <div class="help-block with-errors"></div>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <input type="submit" class="btn btn-success btn-send" value="Send message">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 align-items-right">
-            <p class="text-muted" id="required-text"><strong>*</strong> These fields are required.</p>
-          </div>
-        </div>
-      </div>
-
-      </form>
-
     </div>
-
-  </div>
-
 </div>
+
+    
+
+<section class="c-section">
+    <h2 class="c-section__title"><span>Our Services</span></h2>
+    <ul class="c-services">
+      <li class="c-services__item">
+        <h3>Responsive Web Design</h3>
+        <p>We leverage the concept of mobile-first design. Through our work, we focus on designing an experience that works across different screen sizes.</p>
+      </li>
+      <li class="c-services__item">
+        <h3>UX Auditing</h3>
+        <p>If you are unsure of how your app behaves, we can help by doing a detailed UX audit that will highlight most of the issues in your product. From there, we can take it further and fix all issues.</p>
+      </li>
+      <li class="c-services__item">
+        <h3>Front End Development</h3>
+        <p>We are Front End masters with a deep focus on HTML, CSS. The result of our work is a responsive, accessible, and performant websites. Either you have the design ready and want us to code it, or you want us to do both design and code, we&rsquo;re happy to do so.</p>
+      </li>
+      <li class="c-services__item">
+        <h3>UX Consultation</h3>
+        <p>If you don&rsquo;t know what kind of service to request from us, don&rsquo;t worry. We can help and see what fits your business and your budget.</p>
+      </li>
+      <li class="c-services__item">
+        <h3>Mobile Apps Design</h3>
+        <p>To reach more customers and the goals of your business, a mobile application is necessary these days. We will work on the app design from scratch to final tested prototype.</p>
+      </li>
+      <li class="c-services__item">
+        <h3>UX Research</h3>
+        <p>It&rsquo;s important to research deeply for the product you want to build. We help in that by defining the user audience, working on user stories, competitive analysis and much more. </p>
+      </li>
+    </ul>
+  </section>
   <!-- Footer Section
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
   
@@ -383,13 +185,13 @@
               <hr>
             </li>
             <li class="nav-item">
-              <a class="footer-link" href="index.html">HOME</a>
+              <a class="footer-link" href="/index.html">HOME</a>
             </li>
             <li class="nav-item">
                 <a class="footer-link" href="/index.html">ABOUT US</a>
             </li>
             <li class="nav-item">
-                <a class="footer-link" href="services.html">SERVICES</a>
+                <a class="footer-link" href="/index.html">SERVICES</a>
             </li>
 
             <li class="nav-item">
@@ -425,6 +227,6 @@
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
 
- <script src="JS/mainScript.js"></script>
+ <script src="JS/features.js"></script>
 </body>
 </html>
