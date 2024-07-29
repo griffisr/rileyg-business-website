@@ -372,7 +372,7 @@ header {
 .open-nav {
 	max-height: 400px !important;
 }
-.sticky {
+.navbar {
     background: var(--primary-color);
     background: -moz-linear-gradient(-45deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     background: -webkit-linear-gradient(-45deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -383,7 +383,6 @@ header {
 }
 nav {
 	width: 100%;
-	margin-top: 5px;
 }
 
 @media only screen and (max-width: 766px) {
@@ -1009,6 +1008,9 @@ header{
     /*Mobile*/
   @media (max-width: 768px) {
 
+    .navbar-brand-logo{
+        height: 3em;
+    }
     .hero-img{
         width: 100%;
       }
@@ -1028,7 +1030,7 @@ header{
         align-content: space-between;
     }
     .scroll-down{
-        bottom: 15vh;
+        bottom: 5vh;
     }
 
     .box__content{
@@ -1135,20 +1137,31 @@ opacity: 0;
 
   /********************** NEW CSS************************************************ */
 
+  .navbar{
+    padding: .5em 1.5em;
+  }
   .hero-container{
-    background-color: #edf2f7f6;
-    border-radius: 10%;
     padding-top: 1vh;
     padding-bottom: 1vh;
+  }
+  .jumbotron{
+    border-radius: 10%;
   }
 
   #contact-section{
     padding: 2vh 0 2vh 0;
 
   }
+  #contact-wrap{
+    margin: 0;
+  }
   @media (max-width: 768px) {
     #contact-header{
         text-align: center;
+    }
+    .navbar-toggler-icon{
+        width: 3em;
+        height: 3em;
     }
 
   }

@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
         //Adds the nav bar when user starts to scroll
         if ($(window).width() < 768) {
@@ -41,15 +42,17 @@ fade($('.quoteLoop > .quote').first());
 /* Navigation
 ------------------------------------------------------ */
 
-$(window).scroll(function() {
+// $(window).scroll(function() {
 
-    //Adds the nav bar when user starts to scroll
-    if ($(window).scrollTop() > -1) {
-        $('.main_nav').addClass('sticky');
-    } else {
-        $('.main_nav').removeClass('sticky');
-    }
-});
+//     //Adds the nav bar when user starts to scroll
+//     if ($(window).scrollTop() > ($('.navbar').height() * 3) ) {
+//         $('.navbar').addClass('sticky-top');
+//         console.log("stickey on")
+//     } else {
+//         $('.navbar').removeClass('sticky-top');
+//         console.log("stickey off")
+//     }
+// });
 
 // Mobile Navigation
 $('.mobile-toggle').click(function() {
