@@ -1,0 +1,110 @@
+@charset "UTF-8";
+:root {
+
+    --primary-color: #4A5568; /* Charcoal */
+    --secondary-color: #718096; /* Cool Grey */
+    --accent-color: #48BB78; /* Green */
+    --background-color: #F7FAFC; /* Light Grey */
+    --text-color: #2D3748; /* Dark Grey */
+  
+    /* Extended Color Palette */
+    --light-accent-color: #9AE6B4; /* Light Green */
+    --dark-accent-color: #2F855A; /* Dark Green */
+    --highlight-color: #E6FFFA; /* Mint Green */
+    --warning-color: #E53E3E; /* Red */
+    --success-color: #38A169; /* Green */
+    --info-color: #4299E1; /* Blue */
+    --neutral-color: #EDF2F7; /* Very Light Grey */
+    --muted-text-color: #A0AEC0; /* Muted Grey */
+
+
+
+  /*Primary*/
+  --color-brand-primary: hsl(var(--color-brand-primary-h), var(--color-brand-primary-s), var(--color-brand-primary-l));
+  --color-brand-primary-h: 218;
+  --color-brand-primary-s: 16.85%;
+  --color-brand-primary-l: 34.90%;
+  /* Accent Color */
+  --color-brand-accent: hsl(var(--color-brand-accent-h), var(--color-brand-accent-s), var(--color-brand-accent-l));
+  --color-brand-accent-h: 140.53;
+  --color-brand-accent-s: 60.32%;
+  --color-brand-accent-l: 75.29%;
+  /* Background brand color */
+  --color-brand-accent-bg: hsl(var(--color-brand-accent-bg-h), var(--color-brand-accent-bg-s), var(--color-brand-accent-bg-l));
+  --color-brand-accent-bg-h: 0;
+  --color-brand-accent-bg-s: 0%;
+  --color-brand-accent-bg-l: 98%;
+
+
+  --ratio: 1.4;
+  --s-6: calc(var(--s-5) / var(--ratio));
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: calc(1.05rem + 0.333vw);
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+  --s6: calc(var(--s5) * var(--ratio));
+  font-size: 62.5%;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+@media (min-width: 40.625em) {
+  :root {
+    --s0: calc(1.25rem + 0.333vw);
+  }
+}
+@media (min-width: 48em) {
+  :root {
+    --s0: calc(1.4rem + 0.333vw);
+  }
+}
+@media (min-width: 62em) {
+  :root {
+    --s0: calc(1.6rem + 0.333vw);
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  background-color: var(--color-brand-accent-bg);
+  min-height: 100vh;
+}
+@media (min-width: 48em) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+
+h2, h3, p, ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+ul li {
+  /* Remove li Bullets with zero-width space for accessability */
+  list-style-type: none;
+}
+ul li:before {
+  content: "​";
+  /* add zero-width space */
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+}
+
+
