@@ -370,7 +370,7 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 		margin-bottom: 20px !important;
 	}
     .dropdown-item{
-        color: var(--neutral-color);
+        color: var(--text-color); 
     }
 }
 

@@ -1,3 +1,14 @@
+:root{
+  --dark: #26263f;
+  --dust: #ebe3df;
+  --pumpkin: #f26b10;
+  --pink: #db5387;
+  --violet: #7d41d8;
+  color: var(--dark);
+}
+
+
+
 /* main section. Padding on top to put it below the nav bar */
 .c-section {
     padding: var(--s5) var(--s3) var(--s1) var(--s3);
@@ -211,15 +222,10 @@ body {
   max-width: 1200px; */
   margin: 0 auto;
   overflow-x: hidden;
-  --dark: #26263f;
-  --dust: #ebe3df;
-  --pumpkin: #f26b10;
-  --pink: #db5387;
-  --violet: #7d41d8;
-  color: var(--dark);
+
 }
 main{
-  padding: 0 10px;
+  /* */
 }
 a {
   text-decoration: none;
@@ -228,10 +234,11 @@ a {
 section {
   position: relative;
   padding-top: 150px;
-  margin-bottom: 150px;
+  margin-bottom: 200px;
 }
 
 .section-wrapper {
+  padding: var(--s1) var(--s3);
   width: 40%;
 }
 
@@ -395,9 +402,10 @@ section p:last-of-type {
   z-index: -1;
 }
 
+/* Creates the larger background design circle */
 .enim-circles {
   position: absolute;
-  top: -15vw;
+  /* top: -15vw; */ 
   left: -20vw;
   width: 70vw;
   max-width: 840px;
@@ -415,8 +423,9 @@ section p:last-of-type {
   width: 30%;
   padding-top: 30%;
   border-radius: 50%;
-  background-color: var(--violet);
+  background-color: var(--accent-color);
 }
+
 
 .profile-card {
   position: absolute;
@@ -431,109 +440,26 @@ section p:last-of-type {
   box-shadow: 2px 0 25px 0 rgba(0,0,0,0.1);
 }
 
-.profile-card::before {
+.profile-card {
   content: "";
-  position: absolute;
-  bottom: 25%;
-  left: 10%;
-  transform: translateY(50%);
-  width: 60%;
-  padding-top: 36%;
-  border-radius: 8px;
-  background-color: #a9a9b3;
-}
-
-.profile-card::after {
-  content: "";
-  position: absolute;
-  bottom: 25%;
-  left: 15%;
-  transform: translateY(50%);
-  width: 60%;
-  padding-top: 44%;
-  border-radius: 8px;
-  background-color: hsla(240, 13%, 35%, 0.7);
-}
-
-.master-card {
+  display: block;
+  background-size: calc(var(--s6) * 3) calc(var(--s6) * 3);
+  width: calc(var(--s6) * 3);
+  height: calc(var(--s6) * 3);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 1;
-  position: absolute;
-  left: 22%;
-  bottom: 25%;
-  transform: translateY(50%);
-  width: 85%;
-  padding-top: 54%;
-  background-color: var(--dark);
-  overflow: hidden;
-  border-radius: 8px;
+  background-image: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/devices/T-Devices.png");
 }
 
-.master-card::before {
-  content: "";
-  position: absolute;
-  width: 70%;
-  padding-top: 70%;
-  border-radius: 50%;
-  top: -45%;
-  right: -25%;
-  background-color: var(--dust);
+@media (min-width: 40.625em) {
+  .profile-card{
+    background-size: calc(var(--s5) * 3) calc(var(--s5) * 3);
+  }
 }
 
-.master-card::after {
-  content: "";
-  position: absolute;
-  width: 50%;
-  padding-top: 50%;
-  border-radius: 50%;
-  bottom: 0;
-  left: 10%;
-  transform: translate(-50%, 50%);
-  background-color: #41415e;
-}
-
-.master-card .card-inner {
-  z-index: 2;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-
-.master-card .card-inner::after {
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  content: "**** **** **** 3468";
-  font-size: 0.9em;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  word-spacing: 0.6em;
-  color: #f6f7f8;
-}
-
-.master-card .card-logo {
-  width: 15%;
-}
-
-.master-card .card-logo path:nth-of-type(2) {
-  fill: #db5387;
-}
-
-.master-card .card-logo path:nth-of-type(3) {
-  fill: #7d41d8;
-}
-
-.profile-content {
-  width: 90%;
-  margin: 8% auto;
-}
-
-.profile-card .fa-arrow-left {
-  font-size: 1.3em;
-  color: #5f5f75;
-}
 
 .user-row {
   display: flex;
@@ -542,52 +468,6 @@ section p:last-of-type {
   margin-bottom: 10%;
 }
 
-.username {
-  font-size: 1.6em;
-  font-weight: 700;
-}
-
-.userpic {
-  width: 15%;
-  padding-top: 15%;
-  border-radius: 50%;
-  background-image: url(https://images.unsplash.com/photo-1541182388496-ac92a3230e4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
-  background-size: 180%;
-  background-position: 50% 20%;
-  background-repeat: no-repeat;
-}
-
-.bg-search-field {
-  box-shadow: 0 0 10px 0 rgba(50,50,50,0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3% 4%;
-  margin-bottom: 8%;
-  border-radius: 2px;
-  color: #9b9ba7;
-}
-
-.search-placeholder {
-  font-size: 0.8em;
-}
-
-.fa-search {
-  font-size: 1.2em;
-}
-
-.choose-card {
-  text-transform: uppercase;
-  font-size: 0.8em;
-  color: #9b9ba7;
-  margin-bottom: 3%;
-}
-
-.balance {
-  font-weight: 700;
-  font-size: 1.2em;
-  line-height: 1.85;
-}
 
 /* designs TEMPOR */
 
@@ -600,102 +480,56 @@ section p:last-of-type {
 .tempor-bg {
   z-index: -2;
   position: absolute;
-  left: 50%;
+  /* left: 50%; */
+  right: 0;
   top: -8vw;
   width: 0;
   height: 50vw;
   max-height: 600px;
-  border-right: 65vw solid var(--dark);
+  border-right: 120vw solid var(--secondary-color);
   border-top: 10vw solid transparent;
   border-bottom: 8vw solid transparent;
-  transform: skewX(-15deg);
+  transform: skewX(-15deg) translateX(-15%);
+
 }
 
+@media (min-width: 841px) {
+  .tempor-bg {
+    border-right: 40vw solid var(--secondary-color)!important;
+  }
+}
+/* ********************************************************************************************** */
 .tempor-card {
   z-index: -1;
   position: absolute;
-  right: 10vw;
-  top: 24vw;
-  width: 24vw;
+  right: 15vw;
+  top: 3vw;
+  width: 100%;
   max-width: 288px;
   height: 15vw;
-  max-height: 180px;
-  background-color: var(--violet);
+  max-height: 280px;
+  /* background-color: var(--violet); */
   border-radius: 5px;
   overflow: hidden;
-}
 
-.tempor-card.tempor-master {
-  right: 5vw;
-  top: 18vw;
-  background-color: var(--pumpkin);
-}
 
-.tempor-card.tempor-visa {
-  right: 0;
-  top: 12vw;
-  background-color: var(--pink);
-}
 
-.tempor-card::before {
+
+
   content: "";
-  position: absolute;
-  width: 70%;
-  padding-top: 70%;
-  border-radius: 50%;
-  top: -45%;
-  right: -25%;
-  background-color: #6c36bd;
+  display: block;
+  background-size: calc(var(--s4) * 3) calc(var(--s4) * 3);
+  width: calc(var(--s6) * 3);
+  height: calc(var(--s6) * 3);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  background-image: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/devices/T-Devices.png");
+
 }
 
-.tempor-card.tempor-master::before {
-  background-color: #935fbd;
-}
-
-.tempor-card.tempor-visa::before {
-  background-color: #c7376e;
-}
-
-.tempor-card::after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 50%;
-  padding-top: 50%;
-  border-radius: 50%;
-  transform: translate(-50%, 50%);
-  bottom: -5%;
-  left: 30%;
-  background-color: #8b57d8;
-}
-
-.tempor-card .card-inner {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.tempor-card .card-inner::after {
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  content: "**** **** **** 2354";
-  font-size: 0.8em;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  word-spacing: 0.6em;
-  color: #f6f7f8;
-}
-
-.tempor-card .card-logo {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  width: 20%;
-  fill: #f6f7f8;
-}
 
 /* designs MINIMA */
 
@@ -706,27 +540,51 @@ section p:last-of-type {
   z-index: -1;
   width: 100vw;
   position: absolute;
-  border-left: 120vw solid var(--dark);
+  border-left: 100vw solid var(--secondary-color);
   border-top: 7vw solid transparent;
   border-bottom: 10vw solid transparent;
   height: 65vw;
   max-height: 765px;
 }
 
+
+.landscape-card{
+  content: "";
+  display: block;
+  background-size: calc(var(--s6) * 3) calc(var(--s6) * 3);
+  width: calc(var(--s6) * 3);
+  height: calc(var(--s6) * 3);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  background-image: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/devices/WorkSpace.png");
+  
+}
+/* Desktop */
+@media (min-width: 841px) {
+
+}
+/* Mobile */
+@media (max-width: 840px) {
+
+}
 /* designs DIUS */
 
 .dius-bg-design {
   z-index: -1;
   position: absolute;
-  left: -15vw;
+  /* left: -15vw; */
   width: 100vw;
-  height: 40vw;
+  height: 60vw;
   max-height: 600px;
-  transform: translateY(-10%) perspective(300px) rotateY(-10deg) skewX(-15deg);
-  background-color: #faf8f8;
+  /* transform: translateY(-10%) perspective(300px) rotateY(-10deg) skewX(-15deg); */
+  background-color: var(--neutral-color);
+  /* background-color: red; */
   overflow: hidden;
 }
-
+/* dot 1 */
 .dius-bg-design::before {
   content: "";
   position: absolute;
@@ -736,9 +594,9 @@ section p:last-of-type {
   width: 30%;
   padding-top: 30%;
   border-radius: 50%;
-  background-color: #8b57d8;
+  background-color: var(--accent-color);
 }
-
+/* dot 2 */
 .dius-bg-design::after {
   content: "";
   position: absolute;
@@ -748,7 +606,7 @@ section p:last-of-type {
   width: 20%;
   padding-top: 30%;
   border-radius: 50%;
-  background-color: #fd7b25;
+  background-color: var(--color-brand-primary);
 }
 
 
@@ -981,34 +839,26 @@ section p:last-of-type {
   .tempor-bg {
       top: -96px;
       /* right: -240px; */
-      border-top-width: 120px;
-      border-bottom-width: 96px;
+      /* border-top-width: 120px; */
+      /* border-bottom-width: 96px; */
   }
 
-  .tempor-card {
+  /* .tempor-card {
       right: 120px;
       top: 288px;
-  }
+  } */
 
-  .tempor-card.tempor-master {
-      right: 60px;
-      top: 216px;
-  }
 
-  .tempor-card.tempor-visa {
-      right: 0;
-      top: 144px;
-  }
-
-  .minima-bg-design {
+  /* .minima-bg-design {
       left: 600px;
-  }
+  } */
 }
 
 @media screen and (max-width: 1024px) {
+
   section {
       position: relative;
-      padding-top: 120px;
+      padding-top: 100px;
       margin-bottom: 60px;
   }
 
@@ -1053,9 +903,9 @@ section p:last-of-type {
       margin: 5% auto;
   }
 
-  .profile-card .fa-arrow-left {
+  /* .profile-card .fa-arrow-left {
       font-size: 1.2em;
-  }
+  } */
 
   .user-row {
       margin-bottom: 6%;
@@ -1084,20 +934,17 @@ section p:last-of-type {
   }
 
   .tempor-bg {
-      left: 55%;
+      /* left: 55%; */
   }
 
-  .tempor-card .card-inner::after {
-      font-size: 0.6em;
-  }
 
   #video {
       width: 45%;
   }
 
   .dius-bg-design {
-      top: 15vw;
-      left: -5vw;
+      /* top: 15vw;
+      left: -5vw; */
   }
 
 }
@@ -1190,10 +1037,10 @@ section p:last-of-type {
   }
 
   .tempor-bg {
-      left: 30%;
+      /* left: 30%; */
       top: -400px;
       min-height: 400px;
-      border-right: 80vw solid var(--dark);
+      /* border-right: 80vw solid var(--color-brand-primary); */
   }
 
   .minima-bg-design {
@@ -1204,26 +1051,17 @@ section p:last-of-type {
   }
 
   .tempor-card {
-      right: 50%;
-      top: -190px;
-      transform: translateX(50%);
-      width: 24vw;
+      right: 20%;
+      top: -32vh;
+      /* transform: translateX(50%); */
       min-width: 230px;
-      height: 15vw;
+      /* max-height: 15vw; */
       min-height: 140px;
+      width: calc(var(--s6) * 3);
+      height: calc(var(--s6) * 3);
+      background-size: calc(var(--s5) * 3) calc(var(--s5) * 3);
   }
 
-  .tempor-card.tempor-master {
-      right: 44%;
-      top: -190px;
-      transform: translate(50%, -38%);
-  }
-
-  .tempor-card.tempor-visa {
-      right: 38%;
-      top: -190px;
-      transform: translate(50%, -68%);
-  }
 
   .tempor-card .card-inner::after {
       font-size: 0.7em;
@@ -1239,19 +1077,19 @@ section p:last-of-type {
   }
 
   .dius-bg-design {
-      left: 50%;
-      width: 140vw;
+      /* left: 50%; */
+      /* width: 140vw; */
       height: 60vw;
       min-height: 500px;
-      transform: translate(-50%, -10%) perspective(300px) rotateY(-10deg) skewX(-15deg);
+      /* transform: translate(-50%, -10%) perspective(300px) rotateY(-10deg) skewX(-15deg); */
   }
 
-  .dius-bg-design::before {
+  /* .dius-bg-design::before {
       visibility: hidden;
-  }
+  } */
 
   .dius-bg-design::after {
-      visibility: hidden;
+      bottom: 15%;
   }
 
 }
