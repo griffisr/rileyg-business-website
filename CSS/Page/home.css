@@ -176,6 +176,8 @@
     left: 9px;
   }
 
+  .c-section h2:after{}
+
   /************ Larger subheading fonts on larger screens  ******************* */
   @media (min-width: 40.625em) {
     .c-section span:after {
@@ -476,49 +478,38 @@ section p:last-of-type {
   top: 0;
   left: 0;
 }
+@media (max-width: 840px) {
+  .tempor-bg-design {
+    padding: 0 0 10em 0;
+  }
 
+}
 .tempor-bg {
   z-index: -2;
   position: absolute;
   /* left: 50%; */
   right: 0;
-  top: -8vw;
+  /* top: -8vw; */
   width: 0;
   height: 50vw;
   max-height: 600px;
   border-right: 120vw solid var(--secondary-color);
-  border-top: 10vw solid transparent;
-  border-bottom: 8vw solid transparent;
-  transform: skewX(-15deg) translateX(-15%);
-
+  /* border-top: 10vw solid transparent;
+  border-bottom: 8vw solid transparent; */
+  transform: skewY(-15deg);
 }
 
-@media (min-width: 841px) {
-  .tempor-bg {
-    border-right: 40vw solid var(--secondary-color)!important;
-  }
-}
 /* ********************************************************************************************** */
 .tempor-card {
-  z-index: -1;
-  position: absolute;
-  right: 15vw;
-  top: 3vw;
-  width: 100%;
-  max-width: 288px;
-  height: 15vw;
-  max-height: 280px;
-  /* background-color: var(--violet); */
+  /* position: absolute; */
+
+  /* max-width: 288px;
+  max-height: 280px; */
   border-radius: 5px;
   overflow: hidden;
-
-
-
-
-
   content: "";
   display: block;
-  background-size: calc(var(--s4) * 3) calc(var(--s4) * 3);
+  background-size: calc(var(--s6) * 3) calc(var(--s6) * 3);
   width: calc(var(--s6) * 3);
   height: calc(var(--s6) * 3);
   background-repeat: no-repeat;
@@ -529,7 +520,35 @@ section p:last-of-type {
   background-image: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/devices/T-Devices.png");
 
 }
+@media (min-width: 1200px) {
+  .tempor-card{
+    position: absolute;
+    right: 0;
+    top: 50%; 
+    background-size: calc(var(--s6) * 3) calc(var(--s6) * 3);
+    width: calc(var(--s6) * 3);
+    height: calc(var(--s6) * 3);
+  }
+  .tempor-bg {
+    border-right: 45vw solid var(--secondary-color)!important;
+  }
 
+}
+
+@media (min-width: 841px) and (max-width: 1199px) {
+  .tempor-bg {
+    border-right: 45vw solid var(--secondary-color)!important;
+  }
+
+  .tempor-card{
+    position: absolute;
+    right: 5%;
+    top: calc(var(--s5)); 
+    background-size: calc(var(--s5) * 3) calc(var(--s5) * 3);
+    width: calc(var(--s5) * 3);
+    height: calc(var(--s5) * 3);
+  }
+}
 
 /* designs MINIMA */
 
@@ -580,9 +599,13 @@ section p:last-of-type {
   height: 60vw;
   max-height: 600px;
   /* transform: translateY(-10%) perspective(300px) rotateY(-10deg) skewX(-15deg); */
-  background-color: var(--neutral-color);
+  /* background-color: var(--neutral-color); */
   /* background-color: red; */
+  /* transform: skewY(-10deg); */
   overflow: hidden;
+}
+#bottom-section{
+  margin-top: 10%;
 }
 /* dot 1 */
 .dius-bg-design::before {
@@ -837,7 +860,7 @@ section p:last-of-type {
   }
 
   .tempor-bg {
-      top: -96px;
+      /* top: -96px; */
       /* right: -240px; */
       /* border-top-width: 120px; */
       /* border-bottom-width: 96px; */
@@ -1011,20 +1034,20 @@ section p:last-of-type {
   }
 
   #enim {
-      margin-top: 360px;
+      margin-top: 440px;
       padding-top: 180px;
   }
 
   .enim-circles {
       top: 0;
       left: 0;
-      transform: translate(-50%, -50%);
+      transform: translate(-40%, -65%);
       min-width: 500px;
       min-height: 500px;
   }
 
   .profile-card {
-      left: 50vw;
+      left: 55vw;
       top: -300px;
       transform: translateX(-50%);
       min-width: 270px;
@@ -1032,13 +1055,13 @@ section p:last-of-type {
   }
 
   #tempor {
-      margin-top: 230px;
-      padding-top: 150px;
+      margin-top: 1em;
+      /* padding-top: 150px; */
   }
 
   .tempor-bg {
       /* left: 30%; */
-      top: -400px;
+      /* top: -400px; */
       min-height: 400px;
       /* border-right: 80vw solid var(--color-brand-primary); */
   }
@@ -1051,12 +1074,12 @@ section p:last-of-type {
   }
 
   .tempor-card {
-      right: 20%;
-      top: -32vh;
+      /* right: 20%;
+      top: -32vh; */
       /* transform: translateX(50%); */
       min-width: 230px;
       /* max-height: 15vw; */
-      min-height: 140px;
+      min-height: 380px;
       width: calc(var(--s6) * 3);
       height: calc(var(--s6) * 3);
       background-size: calc(var(--s5) * 3) calc(var(--s5) * 3);
@@ -1079,19 +1102,22 @@ section p:last-of-type {
   .dius-bg-design {
       /* left: 50%; */
       /* width: 140vw; */
-      height: 60vw;
+      height: 100%;
       min-height: 500px;
       /* transform: translate(-50%, -10%) perspective(300px) rotateY(-10deg) skewX(-15deg); */
   }
+
 
   /* .dius-bg-design::before {
       visibility: hidden;
   } */
 
   .dius-bg-design::after {
-      bottom: 15%;
+      bottom: 10%;
   }
-
+  .dius-bg-design::before {
+    
+}
 }
 
 @media screen and (max-width: 720px) {
@@ -1111,6 +1137,23 @@ section p:last-of-type {
       width: 100%;
       max-width: 100%;
   }
+
+  .tempor-card{
+      /* right: 20%;
+      top: -32vh; */
+      /* transform: translateX(50%); */
+      min-width: 230px;
+      /* max-height: 15vw; */
+      min-height: 380px;
+      width: calc(var(--s6) * 3);
+      height: calc(var(--s6) * 3);
+      background-size: calc(var(--s6) * 3) calc(var(--s6) * 3);
+  }
+
+  #enim {
+    margin-top: 360px;
+    padding-top: 180px;
+}
 }
 
 @media screen and (max-width: 550px) {
@@ -1199,9 +1242,9 @@ section p:last-of-type {
       top: -250px;
   }
 
-  #tempor {
+  /* #tempor {
       margin-top: 100px;
       padding-top: 280px;
-  }
+  } */
 
 }
