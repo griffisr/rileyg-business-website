@@ -1,0 +1,836 @@
+:root{
+  --dark: #26263f;
+  --dust: #ebe3df;
+  --pumpkin: #f26b10;
+  --pink: #db5387;
+  --violet: #7d41d8;
+  color: var(--dark);
+}
+
+/* *************************************************************************** */
+/* *********************Global Styles***************************************** */
+/* *************************************************************************** */
+
+/* ---| Global Styles |--- */
+body {
+  line-height: 1.6; /* Adjusted to avoid conflicts with tighter line-heights in headings */
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(14px, 1vw, 16px); /* Adjusts for different screen sizes */
+  margin: 0 auto;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+a {
+  text-decoration: none; /* Applies globally */
+}
+
+/* ---| Section Styles Applies to all major sections |--- */
+section {
+  /* position: relative; */
+  /* padding-top: 150px; /* Space below navbar or top content */
+  /* margin-bottom: 200px; Separation between sections */
+}
+
+section h2 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: clamp(10px, 2vw, 20px);
+}
+
+section h3 {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+section h3,
+section p {
+  margin-bottom: clamp(20px, 4vw, 40px);
+}
+
+section p:last-of-type {
+  margin-bottom: clamp(15px, 3vw, 30px);
+}
+
+.section-wrapper {
+  width: 45%;
+  padding-right: 5%;
+}
+
+/* ---| Utility Classes |--- */
+.cta-holder {
+  margin-top: 20px; /* Space above the button */
+  /* text-align: center; Centers the button */
+}
+
+/* ---| Decorative Elements (Backgrounds) |--- */
+/* Simplified and Scoped */
+.header-bg-design {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+}
+
+/* Removed Unused `header-circles-dust`, `header-circles-big`, `.visa-card`, `.card-logo` */
+
+/* ---| Responsive Adjustments |--- */
+/* Added comments for clarity */
+@media (min-width: 40.625em) { /* ~650px */
+  section {
+    /* padding-top: 100px; Reduced top padding for larger screens */
+  }
+}
+
+@media (min-width: 70em) { /* ~1120px */
+}
+
+
+
+/* *************************************************************************** */
+/* *********************Hero Header Section Styles***************************************** */
+/* *************************************************************************** */
+
+/* General Section Styles */
+.c-section {
+  padding: var(--s5) var(--s3) var(--s1) var(--s3); /* Space around content */
+  margin-bottom: 25%;
+}
+
+
+
+/* @media (max-width: 24.255em)
+{
+  .c-section {
+    margin-bottom: 30%;
+  }
+  .c-section span:before{
+    height: 200%!important;
+  }
+
+}
+
+
+@media (min-width: 24.256em)
+{
+  .c-section {
+    margin-bottom: 25%;
+  }
+  .c-section span:before{
+    height: 185%!important;
+  }
+
+} */
+
+
+/* Adjust skewed background height for larger screens */
+/* @media (min-width: 40.625em) {
+  .c-section span:before {
+    top: -90%;
+    height: 250%!important;
+  }
+}
+@media (min-width: 70em) {
+  .c-section span:before {
+    height: 255%!important;
+  }
+} */
+
+
+.c-section span:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  transform: skew(0deg, 10deg); /* Skewed background effect */
+  z-index: -1;
+  background: var(--color-brand-primary);
+  background-attachment: fixed;
+}
+
+
+
+/* Section Text Styling */
+.cta-holder::before{
+  content: "LocalPro Web Solutions is your expert in web design, development, and SEO, enhancing your digital presence and bringing your business to life online!";
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 350;
+  position: relative;
+  /* padding: 0 var(--s3) 0; */
+  color: rgba(255, 255, 255, 0.85); /* Semi-transparent white text */
+  margin-bottom: var(--s1);
+
+}
+.cta-holder{
+  margin-top: var(--s1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Responsive text adjustments */
+@media (min-width: 40.625em) {
+  .c-section span:after {
+    width: 47ch;
+    font-size: 25%;
+  }
+  .cta-holder::before{
+    /* font-size: 200%;
+    line-height: 1.5; */
+  }
+  .cta-holder{
+    width: 50%;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 48em) {
+  .c-section span:after {
+    width: 57ch;
+  }
+}
+
+/* Header Styles */
+.c-section__title {
+  padding: var(--s4) var(--s3) 0;
+  margin: 0 calc(var(--s3) * -1);
+  color: #fff;
+  font-size: calc(var(--s4) * 0.9);
+  font-weight: 900;
+  text-align: center;
+}
+
+/* Header layout adjustments for larger screens */
+@media (min-width: 40.625em) {
+  .c-section__title {
+    padding: var(--s1) var(--s3) 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+    text-align: unset;
+  }
+}
+
+/* Header Text Restrictions */
+.c-section__title span {
+  max-width: 6ch; /* Default max width for small screens */
+}
+@media (min-width: 48em) {
+  .c-section__title span {
+    max-width: 8ch;
+  }
+}
+@media (min-width: 70em) {
+  .c-section__title span {
+    max-width: 10ch;
+  }
+}
+@media (min-width: 90em) {
+  .c-section__title span {
+    max-width: 15ch;
+  }
+}
+
+/* Hero Image Styles */
+.c-section__title:before {
+  content: "";
+  display: block;
+  background-size: calc(var(--s6) * 3);
+  width: calc(var(--s6) * 3);
+  height: calc(var(--s6) * 3);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  background-image: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/hero-img/Man-Woman-Computer1.png");
+}
+
+/* Hero image adjustments for larger screens */
+@media (min-width: 40.625em) {
+  .c-section__title:before {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 47.8125em) {
+  .c-section{
+    padding: var(--s2) var(--s3) var(--s1) var(--s3); /* Space around content with less padding on top for desktop */
+  }
+  .c-section__title:before {
+    transform: translateY(10rem) translateX(2.5rem); 
+    margin-right: 0;
+    background-size: calc(var(--s6) * 3.5);
+    width: calc(var(--s6) * 3.5);
+    height: calc(var(--s6) * 3.5);
+  }
+}
+/* Big desktop screens */
+@media (min-width: 90em) {
+  .c-section{
+    padding: 0 var(--s3) var(--s1) var(--s3); /* Space around content with less padding on top for desktop */
+  }
+  .c-section__title:before {
+    transform: translateY(15rem) translateX(2.5rem); 
+    margin-right: 0;
+    background-size: calc(var(--s6) * 3.5);
+    width: calc(var(--s6) * 3.5);
+    height: calc(var(--s6) * 3.5);
+  }
+}
+
+/* Mobile-specific layout for hero image */
+@media (max-width: 40.624em) {
+  .c-section__title:before {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 20.624em) {
+  .c-section__title:before {
+    background-size: calc(100vh * .25);
+    width: calc(100vh * .25);
+    height: calc(100vh * .25);
+  }
+
+  /* .c-section__title{
+    font-size: 2.6rem;
+  } */
+
+  .cta-holder:before{
+    font-size: 1.2rem;
+  }
+
+  /* .c-section span:before {
+    height: 202%!important;
+  } */
+}
+/* ************************************************************** */
+
+
+
+
+
+/* *************************************************************************** */
+/* *********************Info/CTA Graphics Section Styles***************************************** */
+/* *************************************************************************** */
+
+/* Utility Classes */
+.card-image {
+  content: "";
+  display: block;
+  background-size: calc(var(--s6) * 3) calc(var(--s6) * 3);
+  width: calc(var(--s6) * 3);
+  height: calc(var(--s6) * 3);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+
+.center-block {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* designs ENIM */
+.enim-bg-container {
+  position: relative; /* Makes it the parent context for absolute children */
+}
+
+.enim-bg-design {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.enim-circles {
+  position: absolute;
+  left: -20vw;
+  top: -25vh;
+  width: 70vw;
+  max-width: 840px;
+  height: 70vw;
+  max-height: 840px;
+  border-radius: 50%;
+  background-color: #faf8f8;
+}
+
+.enim-circles::after {
+  content: "";
+  position: absolute;
+  bottom: 25%;
+  left: 35%;
+  width: 30%;
+  padding-top: 30%;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.profile-card {
+  position: absolute;
+  left: 10vw;
+  top: -15vw;
+  width: 32vw;
+  max-width: 380px;
+  height: 55vw;
+  max-height: 660px;
+  background-color: #fff;
+  border-radius: 1vw;
+  box-shadow: 2px 0 25px 0 rgba(0, 0, 0, 0.1);
+}
+
+.profile-card .card-image {
+  background-image: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/devices/T-Devices.png");
+}
+
+/* designs TEMPOR */
+.tempor-bg-design {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.tempor-bg {
+  z-index: -2;
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 50vw;
+  max-height: 600px;
+  border-right: 120vw solid var(--secondary-color);
+  transform: skewY(-15deg);
+}
+
+.tempor-card {
+  background-image: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/devices/T-Devices.png");
+}
+
+@media (min-width: 1200px) {
+  .tempor-card {
+    /* position: absolute;
+    right: 0;
+    top: 50%; */
+  }
+  .tempor-bg {
+    /* border-right: 45vw solid var(--secondary-color); */
+  }
+}
+
+/* designs MINIMA */
+.minima-bg-design {
+  bottom: 10%;
+  left: 50vw;
+  transform: translate(-50%, 50%);
+  z-index: -1;
+  width: 100vw;
+  /* position: absolute; */
+  border-left: 100vw solid var(--secondary-color);
+  border-top: 7vw solid transparent;
+  border-bottom: 10vw solid transparent;
+  height: 65vw;
+  max-height: 765px;
+}
+
+.landscape-card .card-image {
+  background-image: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/devices/WorkSpace.png");
+}
+
+/* designs DIUS */
+.dius-bg-design {
+  z-index: -1;
+  position: absolute;
+  width: 100vw;
+  height: 60vw;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.dius-bg-design::before,
+.dius-bg-design::after {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, 50%);
+  border-radius: 50%;
+}
+
+.dius-bg-design::before {
+  bottom: 0;
+  left: 90%;
+  width: 30%;
+  padding-top: 30%;
+  background-color: var(--accent-color);
+}
+
+.dius-bg-design::after {
+  bottom: 30%;
+  left: 95%;
+  width: 20%;
+  padding-top: 30%;
+  background-color: var(--color-brand-primary);
+}
+
+#bottom-section {
+  margin-top: 10%;
+}
+
+
+
+
+/* *************************************************************************** */
+/* *********************Info/CTA TEXT Section Styles***************************************** */
+/* *************************************************************************** */
+
+
+
+
+/* ---| CONTENT \--- */
+
+#header {
+  position: relative;
+  margin-bottom: 150px;
+}
+
+.fixed-nav {
+  position: fixed;
+  z-index: 100; /* Adjusted for better layering */
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+#header-img {
+  width: 160px;
+}
+
+#nav-bar {
+  width: 40vw;
+  max-width: 560px;
+  min-width: 450px;
+}
+
+#nav-bar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+#nav-bar a {
+  color: #f6f7f8;
+  padding: 10px;
+}
+
+.sign-up {
+  border: 1px solid #f6f7f8;
+  border-radius: 4px;
+  padding: 10px 35px;
+  white-space: nowrap;
+}
+
+#nav-bar .sign-up a {
+  padding: 0;
+}
+
+.intro {
+  margin: 0 5%;
+  padding: 150px 0 0;
+}
+
+.intro h1 {
+  width: 60%;
+  max-width: 550px;
+  font-size: 3.4em;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.intro p {
+  width: 400px;
+  margin-bottom: 40px;
+}
+
+#form {
+  display: flex;
+  width: 60%;
+  max-width: 550px;
+}
+
+#submit {
+  color: #f6f7f8;
+  background-color: var(--pink);
+  border: none;
+  border-radius: 0 24px 24px 0;
+  height: 48px;
+  padding: 0 35px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+#email {
+  font-size: 1rem;
+  width: 100%;
+  height: 48px;
+  padding: 15px 24px;
+  border: 1px solid var(--dust);
+  border-right: none;
+  border-radius: 24px 0 0 24px;
+}
+
+.partners-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.partners {
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.partners-row {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mastercard,
+.visa,
+.paypal {
+  height: 40px; /* Unified styles for consistency */
+}
+
+.mastercard path,
+.visa path,
+.paypal path {
+  fill: #d7d7dc;
+}
+
+#enim,
+#minima {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+#minima {
+  justify-content: space-between;
+  align-items: center;
+  color: #f6f7f8;
+}
+
+#video {
+  width: 50%;
+}
+
+.to-story {
+  font-weight: 700;
+  color: var(--violet);
+}
+
+.to-story span {
+  font-size: 1.4em;
+}
+
+#minima .to-story {
+  color: var(--pumpkin);
+}
+
+.learn-more {
+  color: #f6f7f8;
+  background-color: var(--pink);
+  border-radius: 4px;
+  padding: 15px 35px;
+}
+
+.learn-more ~ p {
+  margin-top: 30px;
+}
+
+.learn-more ~ p a {
+  color: var(--violet);
+  font-weight: 700;
+  font-size: 1.1em;
+  text-decoration: underline;
+}
+
+/* ---| Media Queries |--- */
+
+/* Desktop (min-width: 1200px) */
+/* @media screen and (min-width: 1200px) {
+  .header-circles-dust {
+    right: 144px;
+    top: -360px;
+  }
+
+  .header-circles-big {
+    right: -420px;
+    top: -300px;
+  }
+
+  .visa-card {
+    right: 60px;
+    top: 240px;
+  }
+
+
+  .enim-circles {
+    top: -180px;
+    left: -240px;
+  }
+
+  .profile-card {
+    left: 120px;
+    top: 120px;
+  }
+} */
+@media screen and (min-width: 841px)
+{
+  #enim{
+    /* margin-top: 35vw; */
+  }
+  .c-section span:before{
+
+  }
+}
+/* Tablet (max-width: 1024px) */
+/* @media screen and (max-width: 1024px) {
+
+} */
+/* Tablet only */
+@media screen and (max-width: 840px) and (min-width: 551px) {
+  .enim-bg-design{
+    /* left: 28vw; */
+
+  }
+}
+/* Mobile (max-width: 840px) */
+@media screen and (max-width: 840px) {
+  .section-wrapper {
+    width: 100%;
+    padding: 0 10% 0;
+    margin-top: 55vw;
+  }
+
+  .enim-bg-design{
+    /* left: 28vw; */
+
+  }
+
+  #nav-bar a {
+    color: var(--dark);
+  }
+
+  .sign-up {
+    border-color: var(--dark);
+  }
+
+  .intro h1 {
+    width: 80%;
+  }
+
+  #form {
+    width: 100%;
+  }
+
+  .profile-card {
+    /* min-width: 270px;
+    min-height: 460px;
+    top: -250px; */
+  }
+
+  #enim {
+    /* margin-top: 45vw; */
+    /* height: 100vh; */
+  }
+
+  .tempor-card {
+    /* min-width: 230px;
+    min-height: 380px; */
+  }
+
+  #minima {
+    flex-direction: column;
+  }
+
+  #video {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+/* Small Mobile (max-width: 550px) */
+@media screen and (max-width: 550px) {
+  
+  .c-section{
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 10%!important;
+  }
+  .c-section * {
+    font-size: clamp (1rem, 1.6rem, 1.7rem);
+  }
+  .c-section span:before{
+    height: 100%;
+  }
+  
+  
+  
+  
+  #header {
+    margin-bottom: 100px;
+  }
+
+  #header-img {
+    width: 120px;
+  }
+
+  #nav-bar ul {
+    flex-direction: column;
+  }
+
+  .intro {
+    padding-top: 300px;
+  }
+
+  .intro h1 {
+    font-size: 2em;
+  }
+
+  #form {
+    flex-direction: column;
+  }
+
+  #email {
+    margin-bottom: 20px;
+  }
+
+  #enim {
+    padding-top: 280px;
+  }
+}

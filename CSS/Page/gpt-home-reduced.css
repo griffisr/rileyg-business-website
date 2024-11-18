@@ -1,0 +1,297 @@
+:root {
+    --dark: #26263f;
+    --dust: #ebe3df;
+    --pumpkin: #f26b10;
+    --pink: #db5387;
+    --violet: #7d41d8;
+    --primary-color: var(--dark);
+    --secondary-color: var(--dust);
+    --accent-color: var(--pumpkin);
+    --z-header: 100;
+    --z-background: -1;
+    color: var(--primary-color);
+  }
+  
+  /* *************************************************************************** */
+  /* *********************Global Styles***************************************** */
+  /* *************************************************************************** */
+  
+  body {
+    line-height: 1.6;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  .btn {
+    border-radius: 4px;
+    padding: 15px 35px;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  /* *************************************************************************** */
+  /* *********************Section Styles***************************************** */
+  /* *************************************************************************** */
+  
+  section {
+    padding: 0 var(--s3);
+    margin-bottom: 150px;
+  }
+  
+  section h2,
+  section h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  section h2 {
+    font-size: clamp(2.2rem, 2.5vw, 3rem);
+    line-height: 1.2;
+  }
+  
+  section h3 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  
+  section p {
+    margin-bottom: 30px;
+  }
+  
+  /* *************************************************************************** */
+  /* *********************Hero Header Section Styles***************************** */
+  /* *************************************************************************** */
+  
+  .c-section {
+    padding: var(--s5) var(--s3) var(--s1);
+    margin-bottom: 25%;
+    position: relative;
+  }
+  
+  .c-section__title {
+    font-size: clamp(2rem, 2.5vw, 3.5rem);
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .c-section__title span {
+    max-width: 10ch;
+    display: inline-block;
+  }
+  
+  .c-section span:before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 185%;
+    transform: skew(0deg, 10deg);
+    z-index: var(--z-background);
+    background: var(--primary-color);
+  }
+  
+  .cta-holder {
+    margin-top: var(--s1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .cta-holder::before {
+    content: "LocalPro Web Solutions is your expert in web design, development, and SEO, enhancing your digital presence and bringing your business to life online!";
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: var(--s1);
+  }
+  
+  /* *************************************************************************** */
+  /* *********************Background and Decorative Elements********************* */
+  /* *************************************************************************** */
+  
+  .enim-bg-container {
+    position: relative;
+  }
+  
+  .enim-bg-design,
+  .tempor-bg-design {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--z-background);
+  }
+  
+  .enim-circles {
+    position: absolute;
+    left: -20vw;
+    width: 70vw;
+    max-width: 840px;
+    height: 70vw;
+    max-height: 840px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+  }
+  
+  .enim-circles::after {
+    content: "";
+    position: absolute;
+    bottom: 25%;
+    left: 35%;
+    width: 30%;
+    padding-top: 30%;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+  }
+  
+  .tempor-bg {
+    z-index: var(--z-background);
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 50vw;
+    max-height: 600px;
+    border-right: 120vw solid var(--secondary-color);
+    transform: skewY(-15deg);
+  }
+  
+  /* *************************************************************************** */
+  /* *********************Card Styles******************************************** */
+  /* *************************************************************************** */
+  
+  .card-image {
+    content: "";
+    display: block;
+    background-size: cover;
+    width: calc(var(--s6) * 3);
+    height: calc(var(--s6) * 3);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+  }
+  
+  .profile-card {
+    position: absolute;
+    left: 10vw;
+    top: 10vw;
+    width: 32vw;
+    max-width: 380px;
+    height: 55vw;
+    max-height: 660px;
+    background-color: #fff;
+    border-radius: 1vw;
+    box-shadow: 2px 0 25px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  /* *************************************************************************** */
+  /* *********************Navigation********************************************* */
+  /* *************************************************************************** */
+  
+  .fixed-nav {
+    position: fixed;
+    z-index: var(--z-header);
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+  }
+  
+  .nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+  }
+  
+  #header-img {
+    width: 160px;
+  }
+  
+  #nav-bar {
+    width: 40vw;
+    max-width: 560px;
+    min-width: 450px;
+  }
+  
+  #nav-bar ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  
+  #nav-bar a {
+    color: var(--dark);
+    padding: 10px;
+  }
+  
+  /* *************************************************************************** */
+  /* *********************Responsive Design************************************** */
+  /* *************************************************************************** */
+  
+  @media screen and (max-width: 1024px) {
+    section {
+      padding-top: 100px;
+      margin-bottom: 60px;
+    }
+  
+    .cta-holder {
+      width: 100%;
+    }
+  
+    .c-section__title span {
+      max-width: 8ch;
+    }
+  }
+  
+  @media screen and (max-width: 840px) {
+    .cta-holder {
+      margin-top: var(--s1);
+    }
+  
+    .enim-circles {
+      top: 0;
+      left: 0;
+      transform: translate(-40%, -65%);
+    }
+  
+    .profile-card {
+      top: -250px;
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    #header {
+      margin-bottom: 100px;
+    }
+  
+    .nav-container {
+      flex-direction: column;
+    }
+  
+    #nav-bar ul {
+      flex-direction: column;
+    }
+  
+    .cta-holder {
+      margin-top: 20px;
+    }
+  }
+  
