@@ -89,66 +89,28 @@ section p:last-of-type {
 /* *********************Hero Header Section Styles***************************************** */
 /* *************************************************************************** */
 
-/* General Section Styles */
+/* General Hero Section Styles */
 .c-section {
   padding: var(--s5) var(--s3) var(--s1) var(--s3); /* Space around content */
-  margin-bottom: 25%;
+  background: var(--color-brand-primary);
 }
+/* Add Media Query to make content transform: translateY(-5%); when screen size big/desktop  */
 
-
-
-/* @media (max-width: 24.255em)
-{
-  .c-section {
-    margin-bottom: 30%;
-  }
-  .c-section span:before{
-    height: 200%!important;
-  }
-
-}
-
-
-@media (min-width: 24.256em)
-{
-  .c-section {
-    margin-bottom: 25%;
-  }
-  .c-section span:before{
-    height: 185%!important;
-  }
-
-} */
-
-
-/* Adjust skewed background height for larger screens */
-/* @media (min-width: 40.625em) {
-  .c-section span:before {
-    top: -90%;
-    height: 250%!important;
-  }
-}
-@media (min-width: 70em) {
-  .c-section span:before {
-    height: 255%!important;
-  }
-} */
-
-
-.c-section span:before {
-  content: "";
-  display: block;
+/* Adds the angled background for hero section */
+.c-section::after{
+  content: ''; /* Required to make ::before visible */
   position: absolute;
-  top: 0;
+  /* bottom: 0; */
   left: 0;
   width: 100%;
-  height: 100%;
-  transform: skew(0deg, 10deg); /* Skewed background effect */
-  z-index: -1;
+  height: 5%;
+  /*background: black;     /*For Testing screw offset*/ 
   background: var(--color-brand-primary);
-  background-attachment: fixed;
-}
+  z-index: -1;
+  transform: skew(0, 1deg);  /* Skewed background effect */
 
+}
+/* Add a media Query for LARGE screen to make it a lil taller */
 
 
 /* Section Text Styling */
@@ -170,7 +132,7 @@ section p:last-of-type {
   justify-content: center;
 }
 
-/* Responsive text adjustments */
+/* Responsive text adjustments at 650 pxls */
 @media (min-width: 40.625em) {
   .c-section span:after {
     width: 47ch;
@@ -314,12 +276,108 @@ section p:last-of-type {
 
 
 
+#enim{
+  padding: var(--s5) var(--s3) var(--s5) var(--s3);
+  /* border-top: 2px solid black!important; */
+}
+
+/* designs ENIM */
+.enim-bg-container {
+  position: relative; /* Makes it the parent context for absolute children */
+}
+
+.enim-bg-design {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+/* Back circle */
+.enim-circles {
+  position: absolute;
+  left: -15rem;
+  top: -5rem;
+  width: 70vw;
+  max-width: 45rem;
+  height: 70vw;
+  max-height: 45rem;
+  border-radius: 50%;
+  background-color: #faf8f8;
+  /* background-color: red; */
+  /* z-index: 99; */
+}
+
+/* Mini inside circle */
+.enim-circles::after {
+  content: "";
+  position: absolute;
+  bottom: 15%;
+  left: 20%;
+  width: 70%;
+  padding-top: 70%;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.profile-card {
+  position: absolute;
+  left: 5rem;
+  top: 0rem; 
+  width: 32vw;
+  max-width: 30rem;
+  height: 40rem;
+  max-height: 660px;
+  background-color: #fff;
+  border-radius: 1vw;
+  box-shadow: 2px 0 25px 0 rgba(0, 0, 0, 0.1);
+  background-image: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/devices/T-Devices.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment:local;
+}
+
+
+/* Smaller Screens -> Tablet Cutoff (max-width: 840px) */
+@media screen and (max-width: 840px) {
+  #enim{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profile-card{
+    width: calc(100vw - calc(var(--s3) * 2));
+    max-width: calc(100vw - calc(var(--s3) * 2));
+    left: 0;
+  }
+  .section-wrapper {
+    width: 100%;
+    padding: 0 10% 0;
+    /* margin-top: 55vw; */
+  }
+  .enim-bg-container{
+    height: 45rem;
+  }
+
+}
+
+/* Smaller Screens -> Mobile Cutoff (max-width: 840px) */
+@media screen and (max-width: 560px) {
+  .enim-circles{
+    left: -10rem;
+    top: 0;
+  }
+
+
+}
 
 /* *************************************************************************** */
 /* *********************Info/CTA Graphics Section Styles***************************************** */
 /* *************************************************************************** */
 
 /* Utility Classes */
+/* NOT USED */
 .card-image {
   content: "";
   display: block;
@@ -339,57 +397,7 @@ section p:last-of-type {
   display: block;
 }
 
-/* designs ENIM */
-.enim-bg-container {
-  position: relative; /* Makes it the parent context for absolute children */
-}
 
-.enim-bg-design {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.enim-circles {
-  position: absolute;
-  left: -20vw;
-  top: -25vh;
-  width: 70vw;
-  max-width: 840px;
-  height: 70vw;
-  max-height: 840px;
-  border-radius: 50%;
-  background-color: #faf8f8;
-}
-
-.enim-circles::after {
-  content: "";
-  position: absolute;
-  bottom: 25%;
-  left: 35%;
-  width: 30%;
-  padding-top: 30%;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-}
-
-.profile-card {
-  position: absolute;
-  left: 10vw;
-  top: -15vw;
-  width: 32vw;
-  max-width: 380px;
-  height: 55vw;
-  max-height: 660px;
-  background-color: #fff;
-  border-radius: 1vw;
-  box-shadow: 2px 0 25px 0 rgba(0, 0, 0, 0.1);
-}
-
-.profile-card .card-image {
-  background-image: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/devices/T-Devices.png");
-}
 
 /* designs TEMPOR */
 .tempor-bg-design {
@@ -487,7 +495,6 @@ section p:last-of-type {
 /* *************************************************************************** */
 /* *********************Info/CTA TEXT Section Styles***************************************** */
 /* *************************************************************************** */
-
 
 
 
@@ -631,6 +638,8 @@ section p:last-of-type {
 
 #enim,
 #minima {
+
+  /* margin-top: 55vh; */
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -677,36 +686,7 @@ section p:last-of-type {
   text-decoration: underline;
 }
 
-/* ---| Media Queries |--- */
 
-/* Desktop (min-width: 1200px) */
-/* @media screen and (min-width: 1200px) {
-  .header-circles-dust {
-    right: 144px;
-    top: -360px;
-  }
-
-  .header-circles-big {
-    right: -420px;
-    top: -300px;
-  }
-
-  .visa-card {
-    right: 60px;
-    top: 240px;
-  }
-
-
-  .enim-circles {
-    top: -180px;
-    left: -240px;
-  }
-
-  .profile-card {
-    left: 120px;
-    top: 120px;
-  }
-} */
 @media screen and (min-width: 841px)
 {
   #enim{
@@ -729,16 +709,7 @@ section p:last-of-type {
 }
 /* Mobile (max-width: 840px) */
 @media screen and (max-width: 840px) {
-  .section-wrapper {
-    width: 100%;
-    padding: 0 10% 0;
-    margin-top: 55vw;
-  }
 
-  .enim-bg-design{
-    /* left: 28vw; */
-
-  }
 
   #nav-bar a {
     color: var(--dark);
@@ -756,21 +727,8 @@ section p:last-of-type {
     width: 100%;
   }
 
-  .profile-card {
-    /* min-width: 270px;
-    min-height: 460px;
-    top: -250px; */
-  }
 
-  #enim {
-    /* margin-top: 45vw; */
-    /* height: 100vh; */
-  }
 
-  .tempor-card {
-    /* min-width: 230px;
-    min-height: 380px; */
-  }
 
   #minima {
     flex-direction: column;
@@ -784,13 +742,13 @@ section p:last-of-type {
 
 /* Small Mobile (max-width: 550px) */
 @media screen and (max-width: 550px) {
-  
+  /* ************************************************************************** */
   .c-section{
-    min-height: 90vh;
+    /* min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    font-size: 10%!important;
+    font-size: 10%!important; */
   }
   .c-section * {
     font-size: clamp (1rem, 1.6rem, 1.7rem);
@@ -830,7 +788,4 @@ section p:last-of-type {
     margin-bottom: 20px;
   }
 
-  #enim {
-    padding-top: 280px;
-  }
 }
