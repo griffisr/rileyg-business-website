@@ -1,80 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <meta name="description" content="LocalPro Web Solutions offers expert web design, development, and SEO services.">
-    <meta name="robots" content="index,follow">
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="Grow your online presence with LocalPro Web Solutions. We design, develop, and optimize websites that convert visitors into customers.">
+  <meta name="robots" content="index,follow">
 
-    <title>LocalPro Web Solutions</title>
+  <title>LocalPro Web Solutions</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://s3.amazonaws.com/rileyg.me/business-website/favicon.ico">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://s3.amazonaws.com/rileyg.me/business-website/favicon.ico">
+  <!-- Preconnect for fonts -->
+  <link rel='dns-prefetch' href='//fonts.googleapis.com'/>
+  <link href='https://fonts.gstatic.com' rel='preconnect' crossorigin>
 
-    <!-- Preconnect and Prefetch for Fonts -->
-    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-    <link rel='dns-prefetch' href='//s.w.org' />
-    <link href='https://fonts.gstatic.com' rel='preconnect' crossorigin />
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Google Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="test-Landing.css">
-
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="test-Landing.css">
+  
 </head>
 <body>
+
 <header>
-  <nav class="navbar navbar-expand-md navbar-light fixed-top">
+  <nav class="navbar navbar-expand-md navbar-light fixed-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="https://s3.amazonaws.com/rileyg.me/business-website/Images/Logo/Horizontal+Logo+Design.png" alt="LocalPro Web Solutions Logo" width="180" height="auto">
+      <a class="navbar-brand" href="/">
+        <img src="https://s3.amazonaws.com/rileyg.me/business-website/Images/Logo/Horizontal+Logo+Design.png" alt="LocalPro Web Solutions Logo" width="180">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="checkShowClass()">
           <span class="navbar-toggler-icon"></span>
       </button>
   
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="our-services.html" id="servicesDropdown" 
-               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Services
-            </a>
-            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-              <a class="dropdown-item" href="/our-services/seo-audit-services.html">SEO Audit</a>
-              <a class="dropdown-item" href="/our-services/website-refresh-services.html">Website Refresh</a>
-              <a class="dropdown-item" href="/our-services/website-design-services.html">Website Design</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="our-services.html">All Services</a>
-            </div>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="our-localpro-clients.html">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="FAQs.html">FAQs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="blog.html">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact-us.html">Contact</a>
+        <ul class="navbar-nav ml-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/faqs.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+          <li class="nav-item ml-md-3">
+            <a class="btn btn-primary" href="/contact.html">Get Started</a>
           </li>
         </ul>
       </div>
@@ -82,162 +60,376 @@
   </nav>
 </header>
 
+<!-- FAB for video -->
+<div class="fab-button" data-toggle="modal" data-target="#videoModal">
+  <i class="fa fa-laptop mr-2"></i> Contact Us
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered" style="max-width:800px;">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+
+
+
+        <div class="container text-center">
+          <h2 class="mb-4 font-weight-bold">Get in Touch</h2>
+          <p class="mb-5">Ready to take the next step? Fill out this quick form and we’ll reach out soon.</p>
+          <form class="mx-auto" style="max-width:400px;">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <button class="btn btn-primary btn-block">Send Message</button>
+          </form>
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <main class="mt-5 pt-5">
-
-  <!-- Hero Section -->
-  <section class="hero-section text-center">
-    <img src="https://s3.amazonaws.com/rileyg.me/business-website/Images/hero-img/Man-Woman-Computer1.png"
-       alt="Man and Woman Working on a Computer"
-       class="hero-image img-fluid"
-       width="600"
-      height="auto">
-
-
-
+ <!-- Hero Section with Embedded Video -->
+  <!-- Hero -->
+  <!-- Hero -->
+  <section class="hero-section">
     <div class="container">
-      <h1>Expert Web Solutions for Every Business</h1>
-      <p class="lead my-4">
-        LocalPro Web Solutions enhances your digital presence with dynamic web design, development, and SEO.
-      </p>
-      <a class="btn btn-primary btn-lg" href="#services" role="button">Learn more about our services</a>
-    </div>
-  </section>
-
-  <!-- Introduction Section (ENIM) -->
-  <section id="enim" class="d-flex flex-column flex-lg-row align-items-center position-relative py-5">
-  <div class="section-wrapper ml-lg-5">
-      <h2>Your Digital Partner for Growth and Success</h2>
-      <h3 class="mb-4">Engage your audience and grow your business with LocalPro.</h3>
-      <p>We provide tailored digital solutions designed to captivate audiences and foster lasting customer relationships. Our strategic approach ensures your brand stands out in a crowded market.</p>
-      <p>From SEO audits to full-scale website redesigns, our experienced team helps you navigate the digital landscape with confidence.</p>
-      <a href="about-us.html" class="to-story">Read Our Full Story <i class="fas fa-long-arrow-alt-right"></i></a>
-    </div>  
-
-    <div class="profile-card mb-4 mb-lg-0" aria-hidden="true"></div>
-<div class="enim-bg-container position-absolute w-100 h-100">
-      <div class="enim-bg-design position-absolute"></div>
-    </div>
-    
-  </section>
-
-  <!-- Services Overview Section (TEMPOR) -->
-  <section id="tempor" class="text-white py-5 position-relative">
-    <div class="tempor-bg-design position-absolute"></div>
-    <div class="container d-flex flex-column flex-lg-row align-items-start">
-      <div class="tempor-text w-100 w-lg-50 pr-lg-5">
-        <h2>From Concept to Launch – We’ve Got You Covered</h2>
-        <h3 class="mb-4">End-to-end web solutions that deliver results.</h3>
-        <p>Our comprehensive services cover every stage of your digital journey, from initial planning and design to development, optimization, and ongoing support.</p>
-        <p>We use cutting-edge tools and proven strategies to ensure your site not only looks great but also performs exceptionally well in search rankings and user satisfaction.</p>
+      <div class="row align-items-center">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h1>Stand Out Online & Convert More Visitors</h1>
+          <ul class="list-unstyled bullet-points my-4">
+            <li><i class="fa fa-check text-primary mr-2"></i> Custom, conversion-focused websites</li>
+            <li><i class="fa fa-check text-primary mr-2"></i> Proven SEO strategies for traffic & leads</li>
+            <li><i class="fa fa-check text-primary mr-2"></i> Ongoing support & maintenance</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-lg">Book Your Free Consultation</a>
+        </div>
+        <div class="col-lg-8">
+          <div class="embed-responsive embed-responsive-16by9 mx-auto" style="max-width:600px;">
+            <iframe class="embed-responsive-item" src="https://s3.us-east-1.amazonaws.com/rileyg.me/business-website/LocalPro+Ad(1).mp4" allowfullscreen title="Video Ad"></iframe>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Cards -->
-  <section id="services" class="creative-cards py-5">
+    <!-- Stats Section -->
+    <section class="stats-section mt-5 mb-2">
+      <div class="container text-center">
+        <h3 class="mb-4 font-weight-bold">Our Impact in Numbers</h3>
+        <div class="row">
+          <div class="col-md-3 mb-4">
+            <h3 class="h1 text-white font-weight-bold">200%</h3>
+            <p>Average Traffic Increase</p>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h3 class="h1 text-white font-weight-bold">3X</h3>
+            <p>More Leads Generated</p>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h3 class="h1 text-white font-weight-bold">95%</h3>
+            <p>Client Satisfaction Rate</p>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h3 class="h1 text-white font-weight-bold">100%</h3>
+            <p>Dedicated Support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Benefits Row -->
+  <!-- <section class="pt-5 pb-2">
     <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <i class="fa fa-rocket fa-2x mb-3 text-primary"></i>
+          <h3 class="h5 font-weight-bold">Proven Strategies</h3>
+          <p class="mb-0">Data-driven tactics that boost rankings and leads.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="fa fa-sync-alt fa-2x mb-3 text-primary"></i>
+          <h3 class="h5 font-weight-bold">Full-Service Support</h3>
+          <p class="mb-0">From design to maintenance, we handle it all.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="fa fa-handshake fa-2x mb-3 text-primary"></i>
+          <h3 class="h5 font-weight-bold">Personal Attention</h3>
+          <p class="mb-0">Tailored solutions that fit your unique goals.</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+   <!-- Introduction Section (ENIM) -->
+   <!-- <section id="enim">
+
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          Profile card image Need new image
+          <div class="profile-card mb-4 mb-lg-0 mr-lg-3" aria-hidden="true"></div>
+
+          <div class="enim-bg-container position-absolute w-100 h-100">
+              <div class="enim-bg-design position-absolute"></div>
+          </div>
+
+      </div>
+      <div class="col-lg-6">
+            Text Side
+        <div class="section-wrapper ml-lg-5 mr-lg-5">
+            <h2>Your Digital Partner for Growth and Success</h2>
+            <h3 class="mb-4">Engage your audience and grow your business with LocalPro.</h3>
+            <p>We provide tailored digital solutions designed to captivate audiences and foster lasting customer relationships. Our strategic approach ensures your brand stands out in a crowded market.</p>
+            <p>From SEO audits to full-scale website redesigns, our experienced team helps you navigate the digital landscape with confidence.</p>
+            <a href="about-us.html" class="to-story">Read Our Full Story <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div> 
+
+      </div>
+      </div>
+      
+    </div>
+  </section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section>
+    <div class="container three-card-tabs">
+      <!-- Section Intro -->
+      <div class="row justify-content-center text-center section-intro">
+        <div class="col-12 col-md-9 col-lg-8">
+          <span class="title-decorative d-block mb-2" data-aos="fade-up" data-aos-delay="10">Tailored Web Solutions</span>
+          <h2 class="mb-3" data-aos="fade-up" data-aos-delay="100">More Than Just a Website</h2>
+          <p class="lead" data-aos="fade-up" data-aos-delay="200">
+            We create custom websites that help businesses stand out, engage customers, and drive growth with design and functionality tailored to your goals.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Interactive Section -->
+      <div class="row justify-content-around align-items-center mt-5">
+        <!-- Navigation Tabs -->
+        <div class="col-12 col-md-6 col-lg-5 order-md-2">
+          <ul class="nav flex-column" id="featureTabs" role="tablist">
+            <li class="nav-item mb-3">
+              <a class="nav-link active d-flex align-items-center card" id="feature-1" data-toggle="tab" href="#feature-content-1" role="tab" aria-controls="feature-content-1" aria-selected="true">
+                <div class="card-body">
+                  <h5 class="mb-2">Custom Design That Captures Your Brand</h5>
+                  <p class="mb-0">
+                    Your website should reflect your unique identity. Our designs are custom-tailored to ensure your brand stands out in a crowded online space.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link d-flex align-items-center card" id="feature-2" data-toggle="tab" href="#feature-content-2" role="tab" aria-controls="feature-content-2" aria-selected="false">
+                <div class="card-body">
+                  <h5 class="mb-2">Optimized for Performance</h5>
+                  <p class="mb-0">
+                    Speed and responsiveness are key. Our sites are designed to load fast and perform seamlessly across all devices.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center card" id="feature-3" data-toggle="tab" href="#feature-content-3" role="tab" aria-controls="feature-content-3" aria-selected="false">
+                <div class="card-body">
+                  <h5 class="mb-2">SEO That Drives Traffic</h5>
+                  <p class="mb-0">
+                    Every website we build is optimized to rank well in search engines, helping you attract and convert more customers.
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Tab Content -->
+        <div class="col-12 col-md-6 order-md-1">
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="feature-content-1" role="tabpanel" aria-labelledby="feature-1">
+              <img alt="Custom Web Design" class="img-fluid shadow rounded" src="https://via.placeholder.com/600x400?text=Custom+Web+Design" />
+            </div>
+            <div class="tab-pane fade" id="feature-content-2" role="tabpanel" aria-labelledby="feature-2">
+              <img alt="Optimized Website Performance" class="img-fluid shadow rounded" src="https://via.placeholder.com/600x400?text=Website+Performance" />
+            </div>
+            <div class="tab-pane fade" id="feature-content-3" role="tabpanel" aria-labelledby="feature-3">
+              <img alt="SEO and Traffic Growth" class="img-fluid shadow rounded" src="https://via.placeholder.com/600x400?text=SEO+Traffic+Growth" />
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Section Outro -->
+      <!-- <div class="row justify-content-center text-center mt-5">
+        <div class="col-lg-4 col-md-5">
+          <h6 class="mb-2">Take the First Step</h6>
+          <p>Start building a website that works as hard as you do. Contact us today to get started.</p>
+          <a href="contact.html" class="btn btn-primary btn-sm">Get Started &rsaquo;</a>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+
+
+  
+
+
+ 
+ 
+  <!-- Services Overview -->
+  <section class="py-5">
+    <div class="container text-center">
+      <div class="header-border">
+        <h2 class="mb-4 font-weight-bold sub-header">Our Core Services</h2>
+      </div>
       <div class="row">
-        <div class="card-column col-12 col-md-4 mb-4">
-          <div class="card-details text-center p-4">
-            <div class="card-icons mx-auto mb-3">
-              <img class="light-icon" src="https://imgpanda.com/upload/ib/1yIWjyG41o.png" alt="Core Planning Icon" />
+        <div class="col-md-3 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title h5">Web Design &amp; Development</h3>
+              <p class="card-text">Beautiful, responsive websites that reflect your brand and engage customers.</p>
+              <a href="/services/web-design.html" class="stretched-link">Learn More</a>
             </div>
-            <h3><a href="/our-services/planning.html">Core Planning</a></h3>
-            <p>We strategize every aspect of your digital presence to ensure your website meets your business goals and resonates with your target audience.</p>
           </div>
         </div>
-        <div class="card-column col-12 col-md-4 mb-4">
-          <div class="card-details text-center p-4">
-            <div class="card-icons mx-auto mb-3">
-              <img class="light-icon" src="https://imgpanda.com/upload/ib/Q4tSh2ctkH.png" alt="Traditional Designs Icon" />
+        <div class="col-md-3 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title h5">SEO &amp; Digital Marketing</h3>
+              <p class="card-text">Drive organic traffic, improve rankings, and grow your online visibility.</p>
+              <a href="/services/seo.html" class="stretched-link">Learn More</a>
             </div>
-            <h3><a href="/our-services/design.html">Traditional Designs</a></h3>
-            <p>Our design approach blends creativity with functionality, ensuring a visually appealing, user-friendly website experience.</p>
           </div>
         </div>
-        <div class="card-column col-12 col-md-4 mb-4">
-          <div class="card-details text-center p-4">
-            <div class="card-icons mx-auto mb-3">
-              <img class="light-icon" src="https://imgpanda.com/upload/ib/YQdOwN6IDJ.png" alt="Quality Materials Icon" />
+        <div class="col-md-3 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title h5">Conversion Rate Optimization</h3>
+              <p class="card-text">Turn more visitors into customers with data-driven optimization strategies.</p>
+              <a href="/services/cro.html" class="stretched-link">Learn More</a>
             </div>
-            <h3><a href="/our-services/materials.html">Quality Materials</a></h3>
-            <p>We use reliable, cutting-edge technologies and frameworks to build fast, secure, and scalable websites.</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title h5">Maintenance &amp; Support</h3>
+              <p class="card-text">Keep your site secure, updated, and performing at its best.</p>
+              <a href="/services/maintenance.html" class="stretched-link">Learn More</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Subscribe Section -->
-  <section class="subscribe text-center py-5">
-    <div class="container">
-      <h1>Keep in touch</h1>
-      <p class="lead">Sign up for our newsletter. No spam, we promise.</p>
-      <form class="form-inline justify-content-center mt-4">
-        <input class="form-control form-control-lg mr-2" type="email" placeholder="Your Email" aria-label="Email address">
-        <button class="btn btn-danger btn-lg" type="submit"><i class="fa fa-edit fa-lg"></i> Subscribe</button>
-      </form>
+    <!-- Service Comparison Table -->
+    <section class="pb-2">
+      <div class="container text-center">
+        <h2 class="mb-4 font-weight-bold">Compare Our Packages</h2>
+        <div class="table-responsive">
+          <table class="table comparison-table">
+            <thead class="thead-light">
+              <tr>
+                <th></th>
+                <th>Starter</th>
+                <th>Pro</th>
+                <th>Enterprise</th>
+              </tr>
+            </thead>
+            <tbody class="bg-light">
+              <tr>
+                <td>Custom Design</td>
+                <td><i class="fa fa-check text-success"></i></td>
+                <td><i class="fa fa-check text-success"></i></td>
+                <td><i class="fa fa-check text-success"></i></td>
+              </tr>
+              <tr>
+                <td>SEO Setup</td>
+                <td><i class="fa fa-check text-success"></i></td>
+                <td><i class="fa fa-check text-success"></i></td>
+                <td><i class="fa fa-check text-success"></i></td>
+              </tr>
+              <tr>
+                <td>Advanced CRO</td>
+                <td></td>
+                <td><i class="fa fa-check text-success"></i></td>
+                <td><i class="fa fa-check text-success"></i></td>
+              </tr>
+              <tr>
+                <td>Dedicated Manager</td>
+                <td></td>
+                <td></td>
+                <td><i class="fa fa-check text-success"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <a href="#" class="btn btn-primary btn-lg mt-4">Choose Your Package</a>
+      </div>
+    </section>
+
+
+
+
+  
+
+  <!-- Secondary CTA -->
+  <section class="py-5 text-white" style="background-color: #394b63;">
+    <div class="container text-center">
+      <h2>Ready to Boost Your Online Presence?</h2>
+      <p class="mb-4">Contact us today to schedule a free consultation and discover how we can help you achieve your business goals.</p>
+      <a href="/contact.html" class="btn btn-light btn-lg">Get Started</a>
     </div>
   </section>
 
 </main>
 
-<footer class="bg-light py-4">
-  <div class="container">
-    <div class="row text-center text-md-left">
-      <div class="col-md-4 mb-4 mb-md-0">
-        <img src="Images/Logo/Logo.png" alt="LocalPro Web Solutions small logo" width="120">
-        <p class="mt-2">
-          <a class="footer-link tel" href="tel:(734)XXX-XXXX">
-            <i class="material-icons">call</i>(734)XXX-XXXX
-          </a>
-        </p>
-        <p>
-          <a class="footer-link" href="https://www.facebook.com/themightyoakpar3" target="_blank" rel="noopener">
-            <i class="fa fa-facebook"></i> Find Us On Facebook
-          </a>
-        </p>
-      </div>
-      
-      <div class="col-md-4 mb-4 mb-md-0">
-        <span class="footer-title">Find Us:</span>
-        <p>
-          <a href="https://www.google.com/maps..." target="_blank" rel="noopener">
-            <img src="Images/mapSQ.png" alt="Map location" width="120">
-          </a>
-        </p>
-      </div>
-      
-      <div class="col-md-4">
-        <span class="footer-title">Quick Links</span>
-        <hr>
-        <ul class="list-unstyled">
-          <li><a class="footer-link" href="/index.html">Home</a></li>
-          <li><a class="footer-link" href="/about-us.html">About Us</a></li>
-          <li><a class="footer-link" href="/our-services.html">Services</a></li>
-          <li><a class="footer-link" href="/our-localpro-clients.html">Portfolio</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="text-center mt-4">
-      <span class="copyright">
-        &copy; <script>document.write(new Date().getFullYear())</script> Riley Griffis. All rights reserved.
-      </span>
-    </div>
+<footer class="bg-white py-4">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <p class="mb-2 mb-md-0">&copy; <script>document.write(new Date().getFullYear())</script> LocalPro Web Solutions. All rights reserved.</p>
+    <ul class="list-inline mb-0">
+      <li class="list-inline-item"><a href="/privacy-policy.html">Privacy Policy</a></li>
+      <li class="list-inline-item"><a href="/terms-of-service.html">Terms of Service</a></li>
+    </ul>
   </div>
 </footer>
 
-<!-- Scripts at the Bottom -->
-<script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
-integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
-crossorigin="anonymous"></script>
+<!-- Scripts -->
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" 
 integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7HibX39j7fakFPskvXusvfa0b4Q" 
 crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" 
 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
 crossorigin="anonymous"></script>
-<script defer src="JS/features.js"></script>
+<script src="../JS/mainScript.js"></script>
 </body>
 </html>

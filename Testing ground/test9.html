@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Test 9</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+    body{margin-top:80px;font-family:Arial,sans-serif;background:#f8f8f8;color:#2D3748;}
+    h1,h2,h3{font-weight:700;}
+    .hero-simple {
+      padding:3rem 0;text-align:center;background:#fff;
+    }
+    .steps-row .step {
+      text-align:center;margin-bottom:2rem;
+    }
+    .steps-row .step i {
+      font-size:2rem; margin-bottom:1rem;color:#007bff;
+    }
+  </style>
+</head>
+<body>
+
+<header class="fixed-top bg-white shadow-sm">
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="https://s3.amazonaws.com/rileyg.me/business-website/Images/Logo/Horizontal+Logo+Design.png" alt="Logo" width="180">
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navv4">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navv4">
+        <ul class="navbar-nav ml-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item ml-md-3"><a class="btn btn-primary" href="#">Get Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero-simple">
+    <div class="container">
+      <h1>Launch Your Best Website Yet</h1>
+      <p class="lead my-4">Expert design, SEO, and strategies to drive measurable growth.</p>
+      <a href="#" class="btn btn-primary btn-lg">Get a Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Steps Row (3 Steps) -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 font-weight-bold text-center">How It Works</h2>
+      <div class="row steps-row">
+        <div class="col-md-4 step">
+          <i class="fa fa-search"></i>
+          <h3 class="h6 font-weight-bold">Analyze</h3>
+          <p>We learn your brand & audience.</p>
+        </div>
+        <div class="col-md-4 step">
+          <i class="fa fa-pencil-ruler"></i>
+          <h3 class="h6 font-weight-bold">Create</h3>
+          <p>We build a site that wows & engages.</p>
+        </div>
+        <div class="col-md-4 step">
+          <i class="fa fa-chart-line"></i>
+          <h3 class="h6 font-weight-bold">Optimize</h3>
+          <p>We refine to boost traffic & conversions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services with a Video Thumbnail -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h2 class="mb-4 font-weight-bold">Our Core Services</h2>
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <i class="fa fa-laptop-code fa-2x text-primary mb-2"></i>
+          <h3 class="h6 font-weight-bold">Web Design</h3>
+        </div>
+        <div class="col-md-3 mb-4">
+          <i class="fa fa-search-dollar fa-2x text-primary mb-2"></i>
+          <h3 class="h6 font-weight-bold">SEO</h3>
+        </div>
+        <div class="col-md-3 mb-4">
+          <i class="fa fa-user-check fa-2x text-primary mb-2"></i>
+          <h3 class="h6 font-weight-bold">CRO</h3>
+        </div>
+        <div class="col-md-3 mb-4">
+          <!-- Video Thumbnail Trigger -->
+          <img src="https://via.placeholder.com/200x120?text=Play+Video" alt="Play Video" class="img-fluid rounded mb-2" style="cursor:pointer;" data-toggle="modal" data-target="#videoModal">
+          <h3 class="h6 font-weight-bold">See How We Work</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="videoModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered" style="max-width:800px;">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item"
+                    src="https://s3.us-east-1.amazonaws.com/rileyg.me/business-website/LocalPro+Ad(1).mp4"
+                    allowfullscreen title="Video Popup"></iframe>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial Carousel -->
+  <section class="py-5 bg-light">
+    <div class="container text-center" style="max-width:600px;">
+      <h2 class="mb-4 font-weight-bold">What Clients Say</h2>
+      <p class="font-italic">"Their expertise is top-notch—our site is performing better than ever!"</p>
+      <p class="font-weight-bold mt-2">- Happy Client</p>
+    </div>
+  </section>
+
+  <!-- Signup Form Snippet -->
+  <section class="py-5 text-center">
+    <div class="container" style="max-width:400px;">
+      <h2 class="mb-4 font-weight-bold">Join Our Newsletter</h2>
+      <form>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Your Email">
+        </div>
+        <button class="btn btn-primary btn-block">Sign Up</button>
+      </form>
+      <p class="mt-2">Get tips, insights, and updates delivered straight to your inbox.</p>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-5 text-white text-center" style="background:#394b63;">
+    <div class="container">
+      <h2 class="mb-4 font-weight-bold">Ready to Boost Your Online Presence?</h2>
+      <a href="#" class="btn btn-light btn-lg">Get Started</a>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-white py-4 text-center">
+  <div class="container">
+    <p>© <script>document.write(new Date().getFullYear())</script> LocalPro Web Solutions</p>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Test 3</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    body { margin-top:80px; font-family:Arial,sans-serif; background:#f8f8f8; color:#2D3748; }
+    h1,h2,h3{font-weight:700;}
+    .hero-section {padding:3rem 0;background:#fff;}
+    .hero-section h1 {font-size:2.4rem;}
+    .lead {font-size:1.2rem;}
+    .stats-section h2 {font-size:2rem;}
+    .testimonial-carousel p {
+      font-size:1.2rem; font-style:italic;
+    }
+  </style>
+</head>
+<body>
+
+<header class="fixed-top bg-white shadow-sm">
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="https://s3.amazonaws.com/rileyg.me/business-website/Images/Logo/Horizontal+Logo+Design.png" alt="Logo" width="180"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav2">
+        <ul class="navbar-nav ml-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item ml-md-3"><a class="btn btn-primary" href="#">Get Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h1>Stand Out Online & Convert More Visitors</h1>
+          <p class="lead my-4">We build optimized websites and develop winning SEO strategies to fuel your business growth.</p>
+          <a href="#" class="btn btn-primary btn-lg">Book Your Free Consultation</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="embed-responsive embed-responsive-16by9 mx-auto" style="max-width:600px;">
+            <iframe class="embed-responsive-item" src="https://s3.us-east-1.amazonaws.com/rileyg.me/business-website/LocalPro+Ad(1).mp4" allowfullscreen title="Video Ad"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4 font-weight-bold">Our Impact in Numbers</h2>
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <h3 class="h1 text-primary font-weight-bold">200%</h3>
+          <p>Average Traffic Increase</p>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h3 class="h1 text-primary font-weight-bold">3X</h3>
+          <p>More Leads Generated</p>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h3 class="h1 text-primary font-weight-bold">95%</h3>
+          <p>Client Satisfaction Rate</p>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h3 class="h1 text-primary font-weight-bold">100%</h3>
+          <p>Dedicated Support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services with Detailed Cards -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4 font-weight-bold">Our Services</h2>
+      <p class="mb-5">End-to-end solutions tailored to your needs.</p>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <i class="fa fa-laptop-code fa-2x text-primary mb-3"></i>
+              <h3 class="h5 font-weight-bold">Web Design & Dev</h3>
+              <p>Stunning, responsive sites built to convert visitors into customers.</p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <i class="fa fa-search-dollar fa-2x text-primary mb-3"></i>
+              <h3 class="h5 font-weight-bold">SEO & Marketing</h3>
+              <p>Improve your rankings, reach your audience, and grow leads sustainably.</p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <i class="fa fa-user-check fa-2x text-primary mb-3"></i>
+              <h3 class="h5 font-weight-bold">Conversion Optimization</h3>
+              <p>Fine-tune your site experience so more visitors take action.</p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Carousel (Single Slide For Simplicity) -->
+  <section class="py-5 bg-light">
+    <div class="container text-center" style="max-width:600px;">
+      <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p>"They transformed our online presence. We’re seeing record-high inquiries each month."</p>
+            <footer class="mt-2 font-weight-bold">A Thrilled Customer</footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-5 text-white text-center" style="background:#394b63;">
+    <div class="container">
+      <h2 class="mb-4 font-weight-bold">Ready to Grow Your Business?</h2>
+      <p class="mb-4">Get in touch and let’s start crafting your success story.</p>
+      <a href="#" class="btn btn-light btn-lg">Get Started Today</a>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-white py-4 text-center">
+  <div class="container">
+    <p>© <script>document.write(new Date().getFullYear())</script> LocalPro Web Solutions</p>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

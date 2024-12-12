@@ -1,8 +1,8 @@
   /* Color Palette */
 :root {
   --color-brand-primary: #394b63;
-  --color-accent: #007bff;
-  font-size: 62.5%;
+  --color-accent: #718096;
+  /* font-size: 62.5%; */
   line-height: 1.6;
 
 
@@ -45,12 +45,21 @@
 }
   body {
     font-family: 'Raleway', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1rem;
     color: #2D3748;
     /* background-color: #f8f8f8; */
     background: url("https://s3.us-east-1.amazonaws.com/rileyg.me/business-website/Images/bitmap_1_1.png") no-repeat center/cover;
   }
-  
+  .sub-header{
+    width: fit-content;
+    border-bottom: 2px solid #000000;
+  }
+  .header-border{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
   .navbar-brand img {
     display: block;
   }
@@ -64,19 +73,33 @@
   }
   .hero-section {
 
-    padding: 10rem 2rem;
   }
   
   .hero-section h1 {
     font-size: clamp(2.4rem, 5vw, 3.6rem);
-    font-weight: 700;
+    font-weight: 300;
     margin-bottom: 2rem;
   }
+
+.three-card-tabs h2 {
+  font-size: 3rem;
+}
+.three-card-tabs p {
+  font-size: 1rem;
+
+}
   
-  .hero-section .lead {
+  .hero-section p.lead {
     font-size: clamp(1.6rem, 2.5vw, 2rem);
     max-width: 600px;
     margin: 2rem auto;
+  }
+  .hero-section li {
+    font-size: 1.3rem;
+  }
+
+  .hero-section a{
+    /* font-size: 1.8rem; */
   }
   
   .hero-image {
@@ -85,6 +108,20 @@
     display: block;
     margin: 0 auto 2rem;
   }
+  
+  .video-thumb {
+    max-width: 600px;
+    position: relative;
+  }
+  .play-button-overlay {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .play-button-overlay i {
+    opacity: 0.9;
+  }
+
   
   .card-title {
     font-weight: 600;
@@ -114,45 +151,177 @@
     border-color: var(--color-accent);
   }
   .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #394b63;
+    border-color: #394b63;
   }
   
-  @media (min-width: 768px) {
+
+
+
+  .fab-button {
+    position:fixed;bottom:20px;right:20px;
+    background:#718096;color:#fff;padding:0.75rem 1.25rem;
+    border-radius:50px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.2);
+    cursor:pointer;
+    z-index:999;
+  }
+  
+  .comparison-table td, .comparison-table th {
+    vertical-align:middle;
+    text-align:center;
+  }
+
+
+  .stats-section{
+    background-color: #718096;
+    color: #fff;
+  }
+  
+  .tab-content>.active img{
+    min-height: 100%;
+    max-height: 100%;
+  }
+
+
+  @media (max-width: 768px) {
     .hero-section {
-      padding: 10rem 4rem;
+      /* padding: 10rem 4rem; */
+    }
+    .hero-section h1 {
+      font-size: 3.5rem;
+    }
+    .hero-section p.lead {
+      font-size: 1.2rem;
+    }
+    .hero-section li {
+      font-size: 1.1rem;
+    }
+    .tabs-content{
+      display: flex;
+      flex-direction: column-reverse;
     }
   }
   
-
-
-
-
-
-
   #enim {
     position: relative;
     overflow: hidden;
-    padding: 4rem 2rem;
-    /* justify-content: space-around; */
   }
   
   .profile-card {
-    background-image: url("https://s3.amazonaws.com/rileyg.me/business-website/Images/devices/T-Devices.png");
+    background-image: url("https://s3.us-east-1.amazonaws.com/rileyg.me/business-website/Images/T-Devices.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     width: 80vw;
-    max-width: 30rem;
-    height: 40rem;
+    max-width: 100%;
+    height: 30rem;
     border-radius: 1rem;
     box-shadow: 2px 0 25px rgba(0,0,0,0.1);
   }
   
   @media (max-width: 840px) {
     .profile-card {
-      width: 90%;
+      width: 100%;
       max-width: 100%;
       margin-bottom: 2rem;
     }
   }
+
+  .border-starter{
+    border-color: var(--info-color);
+
+  }
+  .btn-starter{
+
+  }
+  .text-starter{
+    color: var(--info-color);
+  }
+
+
+.cta-bar{
+  background-color: var(--secondary-color)
+}
+
+  /* Footer Section
+********************************************************************* */
+
+footer a {
+  color: var(--background-color); /* Light Grey */
+}
+
+footer a:hover {
+  color: var(--accent-color); /* Green */
+  text-decoration: none;
+}
+.footer-logo{
+  background-color: #f7fafc13;
+  border-radius: 15%;
+
+}
+footer hr{
+  border-top: 1px solid #fff;
+}
+.footer-column {
+  text-align: center;
+}
+
+.footer-column .nav-item .nav-link {
+  padding: 0.1rem 0;
+}
+
+.footer-column .nav-item span.nav-link {
+  color: var(--background-color); /* Light Grey */
+}
+
+.footer-column .nav-item span.footer-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--background-color); /* Light Grey */
+  text-transform: uppercase;
+}
+
+.footer-column .nav-item .fas {
+  margin-right: 0.5rem;
+}
+
+.footer-column ul {
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .footer-column ul {
+      text-align: left;
+  }
+}
+
+
+footer {
+  min-height: 120px;
+  padding: 40px 0;
+  background: var(--color-brand-primary); /* Charcoal */
+  /* background: -moz-linear-gradient(-45deg, var(--secondary-color) 0%, var(--color-brand-primary) 100%); */
+  /* background: -webkit-linear-gradient(-45deg, var(--secondary-color) 0%, var(--color-brand-primary) 100%); */
+  /* background: linear-gradient(135deg, var(--secondary-color) 0%, var(--color-brand-primary) 100%); */
+  box-sizing: border-box;
+}
+
+
+.socialIcons {
+  font-size: 34px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo-wrapper img {
+  max-width: 50%;
+}
+
+.footer-link {
+  text-decoration: none;
+}

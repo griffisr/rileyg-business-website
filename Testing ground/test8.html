@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Test 8</title>
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    body { margin-top:80px; font-family:Arial,sans-serif; background:#f8f8f8; color:#2D3748; }
+    h1,h2,h3{font-weight:700;}
+    .hero-bg {
+      background:url('https://via.placeholder.com/1200x600') center/cover no-repeat;
+      padding:6rem 0;
+      text-align:center;
+      color:#fff;
+      position:relative;
+    }
+    .hero-bg:before {
+      content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);
+    }
+    .hero-bg .content {position:relative;z-index:2;}
+    .timeline-step {border-left:2px solid #ccc;padding-left:1rem;position:relative;margin-bottom:2rem;}
+    .timeline-step i {
+      position:absolute;left:-17px;top:0;
+      background:#fff;
+      border:2px solid #007bff;
+      border-radius:50%;
+      padding:5px;
+    }
+  </style>
+</head>
+<body>
+
+<header class="fixed-top bg-white shadow-sm">
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="https://s3.amazonaws.com/rileyg.me/business-website/Images/Logo/Horizontal+Logo+Design.png" alt="Logo" width="180">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navv2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navv2">
+        <ul class="navbar-nav ml-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <!-- Video trigger icon in nav -->
+          <li class="nav-item ml-md-3">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#videoModal">
+              <i class="fa fa-play-circle fa-2x text-primary"></i>
+            </a>
+          </li>
+          <li class="nav-item ml-md-3"><a class="btn btn-primary" href="#">Get Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- Modal -->
+  <div class="modal fade" id="videoModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" style="max-width:800px;" role="document">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://s3.us-east-1.amazonaws.com/rileyg.me/business-website/LocalPro+Ad(1).mp4" allowfullscreen title="Video Modal"></iframe>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero with background image -->
+  <section class="hero-bg position-relative">
+    <div class="overlay"></div>
+    <div class="content container">
+      <h1 class="mb-4">Your Path to Online Success</h1>
+      <p class="lead mb-4">We’ll guide you from concept to conversions with our proven methods.</p>
+      <a href="#" class="btn btn-light btn-lg">Get Your Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="py-5 bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <i class="fa fa-rocket fa-2x text-primary mb-2"></i>
+          <h3 class="h5 font-weight-bold">Increased Visibility</h3>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="fa fa-heart fa-2x text-primary mb-2"></i>
+          <h3 class="h5 font-weight-bold">Engaged Customers</h3>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="fa fa-lock fa-2x text-primary mb-2"></i>
+          <h3 class="h5 font-weight-bold">Secure & Reliable</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vertical Timeline (4-step) -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-5 font-weight-bold text-center">Our Process</h2>
+      <div class="timeline-step">
+        <i class="fa fa-search text-primary"></i>
+        <h3 class="h6 font-weight-bold">1. Discover</h3>
+        <p>We analyze your market and goals.</p>
+      </div>
+      <div class="timeline-step">
+        <i class="fa fa-pencil-ruler text-primary"></i>
+        <h3 class="h6 font-weight-bold">2. Design</h3>
+        <p>We create a user-focused, beautiful site.</p>
+      </div>
+      <div class="timeline-step">
+        <i class="fa fa-chart-line text-primary"></i>
+        <h3 class="h6 font-weight-bold">3. Optimize</h3>
+        <p>We refine for search rankings and conversions.</p>
+      </div>
+      <div class="timeline-step">
+        <i class="fa fa-tools text-primary"></i>
+        <h3 class="h6 font-weight-bold">4. Support</h3>
+        <p>We maintain and update for ongoing success.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="mb-4 font-weight-bold">Our Core Services</h2>
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <i class="fa fa-laptop-code fa-2x text-primary mb-2"></i>
+          <h3 class="h6 font-weight-bold">Web Design</h3>
+        </div>
+        <div class="col-md-3 mb-4">
+          <i class="fa fa-search-dollar fa-2x text-primary mb-2"></i>
+          <h3 class="h6 font-weight-bold">SEO</h3>
+        </div>
+        <div class="col-md-3 mb-4">
+          <i class="fa fa-user-check fa-2x text-primary mb-2"></i>
+          <h3 class="h6 font-weight-bold">CRO</h3>
+        </div>
+        <div class="col-md-3 mb-4">
+          <i class="fa fa-shield-alt fa-2x text-primary mb-2"></i>
+          <h3 class="h6 font-weight-bold">Maintenance</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="py-5 text-center">
+    <div class="container" style="max-width:600px;">
+      <p class="font-italic">"Our sales have surged since we began working with LocalPro. Their expertise is unmatched."</p>
+      <p class="font-weight-bold mt-2">- Another Happy Client</p>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-5 text-white text-center" style="background:#394b63;">
+    <div class="container">
+      <h2 class="mb-4 font-weight-bold">Take the First Step</h2>
+      <p class="mb-4">Contact us to start building your online success.</p>
+      <a href="#" class="btn btn-light btn-lg">Get Started</a>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-white py-4 text-center">
+  <div class="container">
+    <p>© <script>document.write(new Date().getFullYear())</script> LocalPro Web Solutions</p>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
